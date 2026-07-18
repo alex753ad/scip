@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trading Dashboard</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+/* ─── Reset & Base ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d1117;
+  --surface:   #161b22;
+  --border:    #21262d;
+  --text:      #e6edf3;
+  --muted:     #7d8590;
+  --green:     #3fb950;
+  --red:       #f85149;
+  --cyan:      #58a6ff;
+  --orange:    #e3b341;
+  --purple:    #bc8cff;
+  --mono:      'Consolas', 'Courier New', monospace;
+}
+
+html, body { height: 100%; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; }
+
+/* ─── Layout ────────────────────────────────────────────────────────── */
+#app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+.main-area { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.top-area { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+
+/* Ticker bar */
+.ticker-bar {
+  display: flex; align-items: center; gap: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  height: 38px; flex-shrink: 0;
+  overflow-x: auto; overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ticker-bar::-webkit-scrollbar { display: none; }
+.ticker-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 16px; height: 100%;
+  border-right: 1px solid var(--border);
+  cursor: pointer; white-space: nowrap;
+  transition: background 0.15s;
+}
+.ticker-item:hover { background: var(--border); }
+.ticker-item.active { background: #1f2937; }
+.ticker-sym { font-weight: 600; font-size: 12px; color: var(--text); }
+.ticker-price { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.badge {
+  font-size: 10px; font-weight: 700; padding: 1px 5px;
+  border-radius: 3px; font-family: var(--mono);
+}
+.badge.up   { background: rgba(63,185,80,.18); color: var(--green); }
+.badge.down { background: rgba(248,81,73,.18);  color: var(--red);   }
+.badge.flat { background: rgba(125,133,144,.18); color: var(--muted); }
+.dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+}
+.dot.monitoring { background: var(--green); box-shadow: 0 0 5px var(--green); animation: pulse 2s infinite; }
+.dot.idle       { background: var(--muted); }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* Main content */
+.content { display: flex; flex: 1; overflow: hidden; }
+
+/* ─── Left: coin grid ───────────────────────────────────────────────── */
+.grid-panel {
+  flex: 1 1 60%; overflow-y: auto; padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+  align-content: start;
+}
+.grid-panel::-webkit-scrollbar { width: 4px; }
+.grid-panel::-webkit-scrollbar-track { background: transparent; }
+.grid-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Coin card */
+.coin-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px;
+  cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.coin-card:hover        { border-color: #3a3f47; }
+.coin-card.selected     { border-color: var(--cyan); box-shadow: 0 0 0 1px var(--cyan); }
+.coin-card.monitoring   { border-left: 3px solid var(--green); }
+
+.card-header {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+}
+.card-sym { font-weight: 700; font-size: 13px; }
+.card-price {
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+  margin-left: auto;
+}
+.phase-badge {
+  font-size: 9px; font-weight: 700; padding: 1px 5px;
+  border-radius: 3px; text-transform: uppercase; letter-spacing: .5px;
+}
+.phase-badge.phase2 { background: rgba(63,185,80,.18); color: var(--green); }
+.phase-badge.phase1 { background: rgba(227,179,65,.18); color: var(--orange); }
+.phase-badge.idle   { background: rgba(125,133,144,.15); color: var(--muted); }
+
+/* Level ruler */
+.ruler { position: relative; height: 140px; margin: 0 4px; }
+.ruler-axis {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: var(--border);
+}
+
+.level-row {
+  position: absolute; left: 0; right: 0;
+  display: flex; align-items: center; gap: 4px;
+}
+.level-line {
+  flex: 1; height: 1px;
+  border-top: 1px dashed;
+}
+.level-line.support    { border-color: var(--green); }
+.level-line.resistance { border-color: var(--red); }
+.level-line.monitored  { border-top-style: solid; }
+
+.level-label {
+  font-family: var(--mono); font-size: 9px; white-space: nowrap;
+  display: flex; align-items: center; gap: 3px;
+}
+.level-label.left-label  { text-align: right; min-width: 60px; color: var(--muted); }
+.level-label.right-label { min-width: 54px; }
+
+.stars { letter-spacing: -2px; font-size: 8px; }
+.stars .s { color: var(--orange); }
+.stars .e { color: var(--border); }
+
+/* Current price marker */
+.price-marker {
+  position: absolute; left: 0; right: 0;
+  display: flex; align-items: center; pointer-events: none; z-index: 2;
+}
+.price-line {
+  flex: 1; height: 1px; background: var(--cyan);
+  box-shadow: 0 0 4px var(--cyan);
+}
+.price-tag {
+  font-family: var(--mono); font-size: 9px; font-weight: 700;
+  color: var(--bg); background: var(--cyan);
+  padding: 1px 4px; border-radius: 2px; white-space: nowrap;
+}
+
+.no-levels {
+  height: 140px; display: flex; align-items: center; justify-content: center;
+  color: var(--muted); font-size: 11px;
+}
+
+/* ─── Right: detail panel ───────────────────────────────────────────── */
+.detail-panel {
+  width: 480px; flex-shrink: 0;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.detail-panel.hidden { display: none; }
+
+/* Charts */
+.charts-wrap { padding: 4px 8px; flex-shrink: 0; }
+.chart-block { position: relative; margin-bottom: 6px; }
+.chart-tf {
+  position: absolute; top: 3px; left: 7px; z-index: 3;
+  font-family: var(--mono); font-size: 10px; color: var(--muted);
+  background: rgba(13,17,23,.6); padding: 0 4px; border-radius: 3px;
+}
+.chart-box { height: 150px; width: 100%; }
+
+.detail-header {
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.detail-sym {
+  font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px;
+}
+.detail-price {
+  font-family: var(--mono); font-size: 22px; font-weight: 700;
+  color: var(--cyan); margin-top: 2px;
+}
+.detail-meta { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+/* Levels table */
+.section-title {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .8px; color: var(--muted);
+  padding: 8px 16px 4px;
+}
+.levels-table { padding: 0 8px; flex-shrink: 0; }
+.levels-table table { width: 100%; border-collapse: collapse; }
+.levels-table th {
+  font-size: 9px; text-transform: uppercase; letter-spacing: .5px;
+  color: var(--muted); padding: 3px 6px; text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.levels-table td {
+  font-family: var(--mono); font-size: 11px;
+  padding: 4px 6px; border-bottom: 1px solid #1a1f27;
+}
+.levels-table tr:hover td { background: #1c2130; }
+.levels-table .mon-dot {
+  display: inline-block; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 4px var(--green);
+  margin-right: 4px;
+}
+
+.strength-bar {
+  display: flex; gap: 2px; align-items: center;
+}
+.strength-pip {
+  width: 8px; height: 8px; border-radius: 1px;
+}
+.strength-pip.on  { background: var(--orange); }
+.strength-pip.off { background: var(--border); }
+
+/* Event log */
+.event-log {
+  flex: 1; overflow-y: auto; padding: 0 8px 8px;
+}
+.event-log::-webkit-scrollbar { width: 3px; }
+.event-log::-webkit-scrollbar-thumb { background: var(--border); }
+
+.event-row {
+  display: flex; gap: 6px; align-items: flex-start;
+  padding: 4px 6px; border-radius: 4px;
+  font-size: 11px; line-height: 1.4;
+}
+.event-row:hover { background: #1a1f27; }
+.event-time { color: var(--muted); font-family: var(--mono); font-size: 10px; white-space: nowrap; margin-top: 1px; }
+.event-type { font-size: 13px; flex-shrink: 0; }
+.event-text { color: var(--text); word-break: break-word; }
+
+/* ─── Empty / loading states ────────────────────────────────────────── */
+.empty-state {
+  grid-column: 1/-1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--muted); gap: 8px; padding: 60px 0; font-size: 13px;
+}
+.empty-state .icon { font-size: 32px; }
+
+/* ─── Scrollbar global ──────────────────────────────────────────────── */
+* { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+
+/* ─── Bottom panel ──────────────────────────────────────────────────── */
+.bottom-panel {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  display: flex; flex-direction: column;
+  height: 260px; flex-shrink: 0;
+}
+.bottom-tabs {
+  display: flex; border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.bottom-tab {
+  padding: 6px 18px; font-size: 12px; cursor: pointer;
+  color: var(--muted); border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+}
+.bottom-tab:hover { color: var(--text); }
+.bottom-tab.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+.bottom-tab .tab-count {
+  display: inline-block; background: rgba(88,166,255,.18);
+  color: var(--cyan); border-radius: 8px;
+  padding: 0 5px; font-size: 10px; margin-left: 4px;
+}
+.bottom-tab .tab-count.red { background: rgba(248,81,73,.18); color: var(--red); }
+.bottom-body { flex: 1; overflow-y: auto; }
+
+/* Signal feed */
+.signal-row {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 4px 12px; border-bottom: 1px solid rgba(33,38,45,.6);
+  font-size: 11px; line-height: 1.5;
+}
+.signal-row:hover { background: #1a1f27; }
+.signal-sym { color: var(--cyan); font-weight: 600; min-width: 80px; font-family: var(--mono); font-size: 10px; }
+.signal-time { color: var(--muted); font-family: var(--mono); font-size: 10px; min-width: 58px; margin-top: 1px; }
+.signal-type { font-size: 13px; }
+.signal-text { color: var(--text); }
+.signal-detail { color: var(--muted); }
+
+/* Open trades table */
+.trades-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.trades-table th { padding: 5px 10px; text-align: left; color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 500; font-size: 10px; position: sticky; top: 0; background: var(--surface); }
+.trades-table td { padding: 5px 10px; border-bottom: 1px solid rgba(33,38,45,.5); }
+.trades-table tr:hover td { background: #1a1f27; }
+.dir-long  { color: var(--green); font-weight: 700; }
+.dir-short { color: var(--red); font-weight: 700; }
+.pnl-pos { color: var(--green); font-family: var(--mono); }
+.pnl-neg { color: var(--red); font-family: var(--mono); }
+.strat-badge {
+  display: inline-block; font-size: 9px; padding: 1px 5px; border-radius: 3px; font-weight: 700;
+}
+.strat-1 { background: rgba(88,166,255,.18); color: var(--cyan); }
+.strat-2 { background: rgba(227,179,65,.18); color: var(--orange); }
+.strat-3 { background: rgba(188,140,255,.18); color: var(--purple); }
+
+/* History stats bar */
+.stats-bar {
+  display: flex; gap: 0; border-bottom: 1px solid var(--border);
+  background: var(--bg); flex-shrink: 0;
+}
+.stat-block {
+  flex: 1; padding: 6px 14px; border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.stat-block:last-child { border-right: none; }
+.stat-label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+.stat-value { font-size: 13px; font-family: var(--mono); font-weight: 600; }
+.stat-sub { font-size: 10px; color: var(--muted); }
+
+/* History filter tabs */
+.hist-filters { display: flex; gap: 0; padding: 6px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.hist-filter {
+  padding: 3px 10px; font-size: 11px; cursor: pointer;
+  border-radius: 3px; color: var(--muted); transition: all .15s;
+}
+.hist-filter:hover { color: var(--text); }
+.hist-filter.active { background: rgba(88,166,255,.15); color: var(--cyan); }
+</style>
+</head>
+
+<body>
+<div id="app">
+
+  <!-- ── Ticker bar ── -->
+  <div class="ticker-bar">
+    <div
+      v-for="coin in state.coins"
+      :key="coin.symbol"
+      class="ticker-item"
+      :class="{ active: selected && selected.symbol === coin.symbol }"
+      @click="selectCoin(coin)"
+    >
+      <div class="dot" :class="coin.monitor_count > 0 ? 'monitoring' : 'idle'"></div>
+      <span class="ticker-sym">{{ coin.symbol.replace('USDT','') }}</span>
+      <span class="ticker-price">{{ fmtPrice(coin.price) }}</span>
+      <span class="badge" :class="pctClass(coin.pct_change)">
+        {{ fmtPct(coin.pct_change) }}
+      </span>
+    </div>
+    <div v-if="state.coins.length === 0" style="padding:0 16px;color:var(--muted)">
+      Ожидание данных…
+    </div>
+  </div>
+
+  <!-- ── Main ── -->
+  <div class="main-area">
+  <div class="top-area content">
+
+    <!-- Left: coin grid -->
+    <div class="grid-panel">
+
+      <div v-if="state.coins.length === 0" class="empty-state">
+        <div class="icon">📡</div>
+        <div>Подключение к боту…</div>
+        <div style="font-size:11px">{{ lastError || 'GET /api/state' }}</div>
+      </div>
+
+      <div
+        v-for="coin in state.coins"
+        :key="coin.symbol"
+        class="coin-card"
+        :class="{
+          selected:   selected && selected.symbol === coin.symbol,
+          monitoring: coin.monitor_count > 0,
+        }"
+        @click="selectCoin(coin)"
+      >
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="dot" :class="coin.monitor_count > 0 ? 'monitoring' : 'idle'"></div>
+          <span class="card-sym">{{ coin.symbol.replace('USDT','') }}</span>
+          <span class="phase-badge" :class="coin.phase">{{ coin.phase }}</span>
+          <span class="card-price">{{ fmtPrice(coin.price) }}</span>
+        </div>
+
+        <!-- Level ruler -->
+        <div v-if="coin.levels.length > 0" class="ruler">
+          <div class="ruler-axis"></div>
+
+          <!-- Level lines, positioned by price -->
+          <div
+            v-for="lvl in rulerLevels(coin)"
+            :key="lvl.price"
+            class="level-row"
+            :style="{ top: lvl.top + 'px' }"
+          >
+            <div class="level-label left-label">
+              <span>{{ fmtPrice(lvl.price) }}</span>
+            </div>
+            <div
+              class="level-line"
+              :class="{
+                support:    lvl.price <= coin.price,
+                resistance: lvl.price > coin.price,
+                monitored:  lvl.monitored,
+              }"
+            ></div>
+            <div class="level-label right-label">
+              <span class="stars">
+                <span v-for="i in 5" :key="i" :class="i <= lvl.strength ? 's' : 'e'">★</span>
+              </span>
+              <span style="font-size:9px;color:var(--muted);margin-left:2px">{{ lvl.type.replace('_',' ') }}</span>
+            </div>
+          </div>
+
+          <!-- Current price marker -->
+          <div
+            v-if="coin.price"
+            class="price-marker"
+            :style="{ top: priceTop(coin) + 'px' }"
+          >
+            <div class="price-line"></div>
+            <div class="price-tag">{{ fmtPrice(coin.price) }}</div>
+            <div class="price-line"></div>
+          </div>
+        </div>
+
+        <div v-else class="no-levels">нет уровней — запустите /analyze</div>
+      </div>
+
+    </div>
+
+    <!-- Right: detail panel -->
+    <div class="detail-panel" :class="{ hidden: !selected }">
+      <template v-if="selected">
+
+        <div class="detail-header">
+          <div class="detail-sym">
+            <div class="dot" :class="selected.monitor_count > 0 ? 'monitoring' : 'idle'"></div>
+            {{ selected.symbol }}
+            <span class="phase-badge" :class="selected.phase" style="font-size:10px">{{ selected.phase }}</span>
+          </div>
+          <div class="detail-price">{{ fmtPrice(selected.price) }}</div>
+          <div class="detail-meta">
+            <span :class="pctClass(selected.pct_change)" style="font-weight:600">{{ fmtPct(selected.pct_change) }}</span>
+            &nbsp;·&nbsp;
+            Vol 15M: {{ fmtVol(selected.vol_15m) }}
+            &nbsp;·&nbsp;
+            {{ selected.monitor_count }} монитор{{ pluralRu(selected.monitor_count) }}
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="section-title">Графики</div>
+        <div class="charts-wrap">
+          <div class="chart-block">
+            <div class="chart-tf">1M</div>
+            <div class="chart-box" ref="chart1m"></div>
+          </div>
+          <div class="chart-block">
+            <div class="chart-tf">15M</div>
+            <div class="chart-box" ref="chart15m"></div>
+          </div>
+        </div>
+
+        <!-- Levels table -->
+        <div class="section-title">Уровни</div>
+        <div class="levels-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Цена</th>
+                <th>Тип</th>
+                <th>Сила</th>
+                <th>Кас.</th>
+                <th>Δ%</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-if="selected.levels.length === 0">
+                <td colspan="6" style="text-align:center;color:var(--muted);padding:12px">
+                  нет данных — /analyze
+                </td>
+              </tr>
+              <tr v-for="lvl in selected.levels" :key="lvl.price">
+                <td>{{ fmtPrice(lvl.price) }}</td>
+                <td style="color:var(--muted);font-size:10px">{{ lvl.type.replace('_',' ') }}</td>
+                <td>
+                  <div class="strength-bar">
+                    <div v-for="i in 5" :key="i" class="strength-pip" :class="i <= lvl.strength ? 'on' : 'off'"></div>
+                  </div>
+                </td>
+                <td style="color:var(--muted)">{{ lvl.candle_count }}</td>
+                <td :style="{ color: lvl.dist_pct < 0 ? 'var(--green)' : 'var(--red)' }">
+                  {{ lvl.dist_pct !== null ? (lvl.dist_pct > 0 ? '+' : '') + lvl.dist_pct + '%' : '—' }}
+                </td>
+                <td>
+                  <span v-if="lvl.monitored" class="mon-dot" title="мониторится"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Event log -->
+        <div class="section-title">События</div>
+        <div class="event-log" ref="eventLog">
+          <div v-if="events.length === 0" style="text-align:center;padding:16px;color:var(--muted)">нет событий</div>
+          <div
+            v-for="ev in events"
+            :key="ev.created_at + ev.event_type"
+            class="event-row"
+          >
+            <span class="event-time">{{ fmtTime(ev.created_at) }}</span>
+            <span class="event-type">{{ eventEmoji(ev.event_type) }}</span>
+            <span class="event-text">
+              <b>{{ ev.event_type }}</b>
+              <span v-if="ev.details" style="color:var(--muted)"> · {{ ev.details }}</span>
+            </span>
+          </div>
+        </div>
+
+      </template>
+      <div v-else style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted)">
+        Выберите монету
+      </div>
+    </div>
+
+  </div><!-- /.top-area -->
+
+  <!-- ── Bottom panel ── -->
+  <div class="bottom-panel">
+    <div class="bottom-tabs">
+      <div class="bottom-tab" :class="{active: bottomTab==='signals'}" @click="bottomTab='signals'">
+        Сигналы
+        <span v-if="signals.length" class="tab-count">{{ signals.length }}</span>
+      </div>
+      <div class="bottom-tab" :class="{active: bottomTab==='open'}" @click="bottomTab='open'">
+        Открытые
+        <span v-if="openTrades.length" class="tab-count">{{ openTrades.length }}</span>
+      </div>
+      <div class="bottom-tab" :class="{active: bottomTab==='history'}" @click="bottomTab='history'">
+        История
+        <span v-if="histStats[histFilter] && histStats[histFilter].total" class="tab-count">{{ histStats[histFilter].total }}</span>
+      </div>
+    </div>
+
+    <!-- Signals -->
+    <div v-if="bottomTab==='signals'" class="bottom-body">
+      <div v-if="signals.length===0" style="padding:20px;text-align:center;color:var(--muted)">нет сигналов</div>
+      <div v-for="s in signals" :key="s.created_at+s.symbol+s.event_type" class="signal-row">
+        <span class="signal-time">{{ fmtTime(s.created_at) }}</span>
+        <span class="signal-type">{{ eventEmoji(s.event_type) }}</span>
+        <span class="signal-sym">{{ s.symbol.replace('USDT','') }}</span>
+        <span class="signal-text"><b>{{ s.event_type }}</b>
+          <span v-if="s.details" class="signal-detail"> · {{ s.details }}</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Open trades -->
+    <div v-if="bottomTab==='open'" class="bottom-body">
+      <div v-if="openTrades.length===0" style="padding:20px;text-align:center;color:var(--muted)">нет открытых сделок</div>
+      <table v-else class="trades-table">
+        <thead><tr>
+          <th>Стратегия</th><th>Монета</th><th>Уровень</th><th>Напр.</th>
+          <th>Вход</th><th>Размер</th><th>Max+%</th><th>Max−%</th><th>Время</th>
+        </tr></thead>
+        <tbody>
+          <tr v-for="t in openTrades" :key="t.trade_id">
+            <td><span class="strat-badge" :class="'strat-'+t.strategy_id">S{{ t.strategy_id }} {{ t.strategy_name }}</span></td>
+            <td style="font-weight:600">{{ t.symbol.replace('USDT','') }}</td>
+            <td style="font-family:var(--mono)">{{ fmtPrice(t.level) }}</td>
+            <td><span :class="t.direction==='long'?'dir-long':'dir-short'">{{ t.direction.toUpperCase() }}</span></td>
+            <td style="font-family:var(--mono)">{{ fmtPrice(t.entry_price) }}</td>
+            <td style="font-family:var(--mono)">${{ t.position_size }}</td>
+            <td :class="t.max_favorable_pct>0?'pnl-pos':''">{{ t.max_favorable_pct!=null ? '+'+t.max_favorable_pct.toFixed(2)+'%' : '—' }}</td>
+            <td :class="t.max_adverse_pct>0?'pnl-neg':''">{{ t.max_adverse_pct!=null ? '−'+t.max_adverse_pct.toFixed(2)+'%' : '—' }}</td>
+            <td style="color:var(--muted)">{{ fmtAge(t.entry_time) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- History -->
+    <div v-if="bottomTab==='history'" class="bottom-body" style="display:flex;flex-direction:column;">
+      <!-- Strategy filter -->
+      <div class="hist-filters">
+        <div class="hist-filter" :class="{active:histFilter==='all'}" @click="histFilter='all'">Все</div>
+        <div class="hist-filter" :class="{active:histFilter==='1'}" @click="histFilter='1'">S1 Bounce</div>
+        <div class="hist-filter" :class="{active:histFilter==='2'}" @click="histFilter='2'">S2 Grid</div>
+        <div class="hist-filter" :class="{active:histFilter==='3'}" @click="histFilter='3'">S3 Breakout</div>
+      </div>
+      <!-- Stats bar for selected strategy -->
+      <div v-if="histFilter!=='all' && histStats[histFilter]" class="stats-bar" style="flex-shrink:0">
+        <div class="stat-block">
+          <div class="stat-label">Сделок</div>
+          <div class="stat-value">{{ histStats[histFilter].total }}</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Винрейт</div>
+          <div class="stat-value" :style="{color: histStats[histFilter].win_rate>=50?'var(--green)':'var(--red)'}">{{ histStats[histFilter].win_rate }}%</div>
+          <div class="stat-sub">{{ histStats[histFilter].wins }}W / {{ histStats[histFilter].losses }}L</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Avg PnL</div>
+          <div class="stat-value" :class="histStats[histFilter].avg_pnl_pct>=0?'pnl-pos':'pnl-neg'">{{ histStats[histFilter].avg_pnl_pct>0?'+':'' }}{{ histStats[histFilter].avg_pnl_pct }}%</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Total USDT</div>
+          <div class="stat-value" :class="histStats[histFilter].total_pnl_usdt>=0?'pnl-pos':'pnl-neg'">{{ histStats[histFilter].total_pnl_usdt>0?'+':'' }}${{ histStats[histFilter].total_pnl_usdt }}</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Avg Win / Loss</div>
+          <div class="stat-value"><span class="pnl-pos">+{{ histStats[histFilter].avg_win_pct }}%</span> / <span class="pnl-neg">{{ histStats[histFilter].avg_loss_pct }}%</span></div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Max DD</div>
+          <div class="stat-value pnl-neg">{{ histStats[histFilter].max_drawdown_pct }}%</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Avg дюрация</div>
+          <div class="stat-value">{{ histStats[histFilter].avg_duration_minutes }}m</div>
+        </div>
+      </div>
+      <!-- Trades table -->
+      <div style="flex:1;overflow-y:auto">
+        <div v-if="histTrades.length===0" style="padding:20px;text-align:center;color:var(--muted)">нет закрытых сделок</div>
+        <table v-else class="trades-table">
+          <thead><tr>
+            <th>Стратегия</th><th>Монета</th><th>Напр.</th>
+            <th>Вход</th><th>Выход</th><th>PnL%</th><th>PnL$</th>
+            <th>Причина</th><th>Длит.</th><th>Дата</th>
+          </tr></thead>
+          <tbody>
+            <tr v-for="t in histTrades" :key="t.id">
+              <td><span class="strat-badge" :class="'strat-'+t.strategy_id">S{{ t.strategy_id }}</span></td>
+              <td style="font-weight:600">{{ t.symbol.replace('USDT','') }}</td>
+              <td><span :class="t.direction==='long'?'dir-long':'dir-short'">{{ t.direction.toUpperCase() }}</span></td>
+              <td style="font-family:var(--mono)">{{ fmtPrice(t.entry_price) }}</td>
+              <td style="font-family:var(--mono)">{{ fmtPrice(t.exit_price) }}</td>
+              <td :class="t.pnl_pct>=0?'pnl-pos':'pnl-neg'">{{ t.pnl_pct!=null?(t.pnl_pct>0?'+':'')+t.pnl_pct.toFixed(2)+'%':'—' }}</td>
+              <td :class="t.pnl_usdt>=0?'pnl-pos':'pnl-neg'">{{ t.pnl_usdt!=null?(t.pnl_usdt>0?'+':'')+t.pnl_usdt.toFixed(2):'—' }}</td>
+              <td style="color:var(--muted);font-size:10px">{{ t.exit_reason || '—' }}</td>
+              <td style="color:var(--muted)">{{ t.duration_minutes!=null?t.duration_minutes.toFixed(0)+'m':'—' }}</td>
+              <td style="color:var(--muted);font-size:10px">{{ fmtDate(t.exit_time) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div><!-- /.bottom-panel -->
+
+  </div><!-- /.main-area -->
+</div>
+
+<script>
+const { createApp, ref, computed, onMounted, onUnmounted, watch, nextTick } = Vue;
+
+createApp({
+  setup() {
+    const POLL_MS   = 3000;
+    const RULER_H   = 140;
+    const PAD       = 12;   // px top/bottom padding for ruler
+
+    const state      = ref({ coins: [], ts: 0 });
+    const selected   = ref(null);
+    const events     = ref([]);
+    const lastError  = ref('');
+    const eventLog   = ref(null);
+    const chart1m    = ref(null);
+    const chart15m   = ref(null);
+
+    // lightweight-charts instances (non-reactive)
+    const lw = { '1m': null, '15m': null };
+
+    const bottomTab  = ref('signals');
+    const signals    = ref([]);
+    const openTrades = ref([]);
+    const histTrades = ref([]);
+    const histStats  = ref({});
+    const histFilter = ref('all');
+
+    let pollTimer    = null;
+    let evTimer      = null;
+    let bottomTimer  = null;
+
+    // ── Fetch state ──────────────────────────────────────────────────
+    async function fetchState() {
+      try {
+        const r = await fetch('/api/state');
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const data = await r.json();
+        state.value = data;
+        lastError.value = '';
+
+        // Refresh selected coin reference
+        if (selected.value) {
+          const fresh = data.coins.find(c => c.symbol === selected.value.symbol);
+          if (fresh) selected.value = fresh;
+        }
+      } catch (e) {
+        lastError.value = e.message;
+      }
+    }
+
+    // ── Fetch events for selected coin ───────────────────────────────
+    async function fetchEvents(symbol) {
+      try {
+        const r = await fetch(`/api/events/${symbol}`);
+        if (!r.ok) return;
+        events.value = await r.json();
+        await nextTick();
+        // Scroll to top (newest first)
+        if (eventLog.value) eventLog.value.scrollTop = 0;
+      } catch { /* silent */ }
+    }
+
+    // ── Fetch bottom panel data ──────────────────────────────────────
+    async function fetchBottom() {
+      try {
+        const [sigR, openR, histR] = await Promise.all([
+          fetch('/api/signals'),
+          fetch('/api/open_trades'),
+          fetch('/api/trades_history' + (histFilter.value !== 'all' ? '?strategy_id=' + histFilter.value : '')),
+        ]);
+        if (sigR.ok)  signals.value    = await sigR.json();
+        if (openR.ok) openTrades.value = await openR.json();
+        if (histR.ok) {
+          const hd = await histR.json();
+          histTrades.value = hd.trades || [];
+          const raw = hd.stats || {};
+          const mapped = {};
+          for (const [k, v] of Object.entries(raw)) mapped[String(k)] = v;
+          histStats.value = mapped;
+        }
+      } catch { /* silent */ }
+    }
+
+    // Watch histFilter → re-fetch history
+    watch(histFilter, fetchBottom);
+
+    // ── Charts (lightweight-charts) ──────────────────────────────────
+    async function fetchCandles(symbol) {
+      try {
+        const r = await fetch(`/api/candles/${symbol}`);
+        if (!r.ok) return {};
+        return await r.json();
+      } catch { return {}; }
+    }
+
+    const CHART_OPTS = {
+      autoSize: true,
+      layout:  { background: { color: '#161b22' }, textColor: '#7d8590', fontSize: 10 },
+      grid:    { vertLines: { color: '#21262d' }, horzLines: { color: '#21262d' } },
+      timeScale:  { timeVisible: true, secondsVisible: false, borderColor: '#21262d' },
+      rightPriceScale: { borderColor: '#21262d' },
+      crosshair:  { mode: 0 },
+    };
+    const SERIES_OPTS = {
+      upColor: '#3fb950', downColor: '#f85149',
+      wickUpColor: '#3fb950', wickDownColor: '#f85149',
+      borderVisible: false,
+    };
+
+    async function renderCharts() {
+      const coin = selected.value;
+      if (!coin || !window.LightweightCharts) return;
+      const data = await fetchCandles(coin.symbol);
+      await nextTick();
+
+      for (const tf of ['1m', '15m']) {
+        const el = tf === '1m' ? chart1m.value : chart15m.value;
+        if (!el) continue;
+
+        let obj = lw[tf];
+        if (!obj || obj.el !== el) {
+          if (obj) obj.chart.remove();
+          const chart  = LightweightCharts.createChart(el, CHART_OPTS);
+          const series = chart.addCandlestickSeries(SERIES_OPTS);
+          obj = lw[tf] = { chart, series, el, lines: [] };
+        }
+
+        const candles = (data[tf] || []).map(k => ({
+          time: k.t, open: k.o, high: k.h, low: k.l, close: k.c,
+        }));
+        obj.series.setData(candles);
+
+        // Redraw level lines
+        obj.lines.forEach(l => obj.series.removePriceLine(l));
+        obj.lines = [];
+        for (const lvl of coin.levels) {
+          if (!lvl.price) continue;
+          const support = lvl.price <= coin.price;
+          obj.lines.push(obj.series.createPriceLine({
+            price: lvl.price,
+            color: support ? '#3fb950' : '#f85149',
+            lineWidth:  lvl.monitored ? 2 : 1,
+            lineStyle:  lvl.monitored ? 0 : 2,   // 0 solid, 2 dashed
+            axisLabelVisible: true,
+            title: '★'.repeat(lvl.strength || 0),
+          }));
+        }
+        obj.chart.timeScale().fitContent();
+      }
+    }
+
+    // ── Select coin ──────────────────────────────────────────────────
+    function selectCoin(coin) {
+      selected.value = coin;
+      events.value   = [];
+      fetchEvents(coin.symbol);
+      renderCharts();
+      clearInterval(evTimer);
+      evTimer = setInterval(() => {
+        fetchEvents(coin.symbol);
+        renderCharts();
+      }, 5000);
+    }
+
+    // ── Ruler helpers ─────────────────────────────────────────────────
+    function rulerLevels(coin) {
+      if (!coin.price || coin.levels.length === 0) return [];
+
+      // Show max 6 levels closest to current price
+      const sorted = [...coin.levels]
+        .filter(l => l.price)
+        .sort((a, b) => Math.abs(a.dist_pct ?? 999) - Math.abs(b.dist_pct ?? 999))
+        .slice(0, 6);
+
+      const prices = sorted.map(l => l.price).concat(coin.price);
+      const minP   = Math.min(...prices) * 0.9995;
+      const maxP   = Math.max(...prices) * 1.0005;
+      const range  = maxP - minP || 1;
+
+      return sorted.map(l => ({
+        ...l,
+        top: PAD + (1 - (l.price - minP) / range) * (RULER_H - PAD * 2),
+      }));
+    }
+
+    function priceTop(coin) {
+      if (!coin.price || coin.levels.length === 0) return RULER_H / 2;
+      const prices = coin.levels.map(l => l.price).filter(Boolean).concat(coin.price);
+      const minP   = Math.min(...prices) * 0.9995;
+      const maxP   = Math.max(...prices) * 1.0005;
+      const range  = maxP - minP || 1;
+      return PAD + (1 - (coin.price - minP) / range) * (RULER_H - PAD * 2);
+    }
+
+    // ── Formatters ────────────────────────────────────────────────────
+    function fmtPrice(p) {
+      if (p == null) return '—';
+      if (p >= 1000) return p.toLocaleString('en', { maximumFractionDigits: 2 });
+      if (p >= 1)    return p.toFixed(4);
+      if (p >= 0.01) return p.toFixed(5);
+      return p.toFixed(8);
+    }
+
+    function fmtPct(v) {
+      if (v == null) return '—';
+      return (v > 0 ? '+' : '') + v.toFixed(1) + '%';
+    }
+
+    function fmtVol(v) {
+      if (v == null) return '—';
+      if (v >= 1e9) return (v / 1e9).toFixed(1) + 'B';
+      if (v >= 1e6) return (v / 1e6).toFixed(0) + 'M';
+      if (v >= 1e3) return (v / 1e3).toFixed(0) + 'K';
+      return v.toString();
+    }
+
+    function fmtTime(ts) {
+      if (!ts) return '';
+      // ts may be ISO string or unix
+      const d = isNaN(ts) ? new Date(ts) : new Date(ts * 1000);
+      return d.toLocaleTimeString('ru', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+
+    function pctClass(v) {
+      if (v == null) return 'flat';
+      if (v > 0) return 'up';
+      if (v < 0) return 'down';
+      return 'flat';
+    }
+
+    function pluralRu(n) {
+      if (n === 1) return '';
+      if (n >= 2 && n <= 4) return 'а';
+      return 'ов';
+    }
+
+    const EVENT_EMOJI = {
+      bounce:           '✅',
+      breakout:         '💥',
+      monitoring_start: '👁',
+      levels_built:     '📐',
+      added_screener:   '🆕',
+      added_manual:     '✍️',
+      removed:          '🗑',
+      zakol:            '⚡',
+      volume_fade:      '📉',
+    };
+    function eventEmoji(t) {
+      return EVENT_EMOJI[t] || '📌';
+    }
+
+    function fmtAge(ts) {
+      if (!ts) return '—';
+      const sec = Math.floor(Date.now() / 1000 - ts);
+      if (sec < 60) return sec + 's';
+      if (sec < 3600) return Math.floor(sec / 60) + 'm';
+      return Math.floor(sec / 3600) + 'h ' + Math.floor((sec % 3600) / 60) + 'm';
+    }
+
+    function fmtDate(ts) {
+      if (!ts) return '—';
+      const d = new Date(ts * 1000);
+      return d.toLocaleDateString('ru', { day: '2-digit', month: '2-digit' }) + ' ' +
+             d.toLocaleTimeString('ru', { hour: '2-digit', minute: '2-digit' });
+    }
+
+    // ── Lifecycle ────────────────────────────────────────────────────
+    onMounted(() => {
+      fetchState();
+      fetchBottom();
+      pollTimer    = setInterval(fetchState,  POLL_MS);
+      bottomTimer  = setInterval(fetchBottom, 5000);
+    });
+
+    onUnmounted(() => {
+      clearInterval(pollTimer);
+      clearInterval(evTimer);
+      clearInterval(bottomTimer);
+    });
+
+    return {
+      state, selected, events, lastError, eventLog,
+      chart1m, chart15m,
+      bottomTab, signals, openTrades, histTrades, histStats, histFilter,
+      selectCoin, rulerLevels, priceTop,
+      fmtPrice, fmtPct, fmtVol, fmtTime, fmtAge, fmtDate,
+      pctClass, pluralRu, eventEmoji,
+    };
+  }
+}).mount('#app');
+</script>
+</body>
+</html>
