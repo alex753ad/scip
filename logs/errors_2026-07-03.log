@@ -1,0 +1,224 @@
+2026-07-03 08:16:53 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'USUSDT', 'order_id': '93a06491-dffd-4253-aebf-162e39fa80c0', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783066613219}}
+2026-07-03 08:39:01 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'BEATUSDT', 'order_id': '5c58da32-ee8b-4aa3-9dae-32b056d363b0', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783067941620}}
+2026-07-03 09:50:38 | ERROR | bot.telegram:btn_add_symbol_input:202 | Failed to load candles for added symbol | {'symbol': 'ARPAUSDRUSDT', 'error': 'APIError(code=-1121): Invalid symbol.'}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 1883, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7504cdd57060>
+    │       └ <function run at 0x7504d18a0680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7504cd13dd00>
+           │      └ <function Runner.run at 0x7504d0757ba0>
+           └ <asyncio.runners.Runner object at 0x7504d1089040>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1865> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7504d0755800>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7504d1089040>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7504d0755760>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7504d0757560>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7504d0deda80>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+                     │    │           │    │         └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,)}
+                     │    │           │    └ Update(update_id=243228371, message=Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0))...
+                     │    │           └ <aiogram.client.bot.Bot object at 0x7504cc613c50>
+                     │    └ <function Dispatcher.feed_update at 0x7504ce1f0180>
+                     └ <Dispatcher '0x7504ced88ef0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+                     │    │      └ <function TelegramEventObserver.wrap_outer_middleware at 0x7504ce1f3740>
+                     │    └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7504cd1a6780>
+                     └ <Dispatcher '0x7504ced88ef0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228371, message=Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0))...
+                 └ functools.partial(<aiogram.dispatcher.middlewares.user_context.UserContextMiddleware object at 0x7504cd1a68d0>, functools.par...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228371, message=Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0))...
+                 └ functools.partial(<aiogram.fsm.middleware.FSMContextMiddleware object at 0x7504cd1a6900>, <function TelegramEventObserver.tri...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228371, message=Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0))...
+                 └ <function TelegramEventObserver.trigger at 0x7504c72aa980>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │             └ Update(update_id=243228371, message=Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0))...
+                 └ <function CallableObject.call at 0x7504a11da480>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<bound method Dispatcher._listen_update of <Dispatcher '0x7504ced88ef0'>>, Update(update_id=243228371, mess...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+                 │    │                           │                  │        └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │    │                           │                  └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │    │                           └ 'message'
+                 │    └ <function Router.propagate_event at 0x7504ce1f1080>
+                 └ <Dispatcher '0x7504ced88ef0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7504a08b5300>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7504ce1f3740>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7504ced890d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7504ce1f0fe0>
+                 └ <Dispatcher '0x7504ced88ef0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 191, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+                     │      │                           │                  │        └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                     │      │                           │                  └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                     │      │                           └ 'message'
+                     │      └ <function Router.propagate_event at 0x7504ce1f1080>
+                     └ <Router '0x7504cd1a6a20'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7504a08b4c20>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7504ce1f3740>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7504cd1a6990>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7504ce1f0fe0>
+                 └ <Router '0x7504cd1a6a20'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 183, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+                     │        │       │        └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                     │        │       └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                     │        └ <function TelegramEventObserver.trigger at 0x7504ce1f3600>
+                     └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7504cd1a6990>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7504ced88ef0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7504cc613c50>,), 'bot': <aiogram.c...
+                 │             └ Message(message_id=37891, date=datetime.datetime(2026, 7, 3, 9, 50, 37, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 └ <function CallableObject.call at 0x7504a13822a0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<function btn_add_symbol_input at 0x7504ce1740e0>, Message(message_id=37891, date=datetime.datetime(2026, 7...
+
+> File "/root/crypto_bot/bot/telegram.py", line 194, in btn_add_symbol_input
+    raw_15m = await client.futures_klines(symbol=symbol, interval="15m", limit=500)
+                    │      │                     └ 'ARPAUSDRUSDT'
+                    │      └ <function AsyncClient.futures_klines at 0x7504cef582c0>
+                    └ <binance.async_client.AsyncClient object at 0x7504a1ac00e0>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 1956, in futures_klines
+    return await self._request_futures_api("get", "klines", data=params)
+                 │    │                                          └ {'symbol': 'ARPAUSDRUSDT', 'interval': '15m', 'limit': 500}
+                 │    └ <function AsyncClient._request_futures_api at 0x7504cef50860>
+                 └ <binance.async_client.AsyncClient object at 0x7504a1ac00e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 237, in _request_futures_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {'data': {'symbol': 'ARPAUSDRUSDT', 'interval': '15m', 'limit': 500}}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://fapi.binance.com/fapi/v1/klines'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x7504cef50680>
+                 └ <binance.async_client.AsyncClient object at 0x7504a1ac00e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 199, in _request
+    return await self._handle_response(response)
+                 │    │                └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=ARPAUSDRUSDT) [400 Bad Request]>
+                 │    │                  <CIMul...
+                 │    └ <function AsyncClient._handle_response at 0x7504cef50720>
+                 └ <binance.async_client.AsyncClient object at 0x7504a1ac00e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+          │                   │         │        │             │        └ <function ClientResponse.text at 0x7504d0079bc0>
+          │                   │         │        │             └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=ARPAUSDRUSDT) [400 Bad Request]>
+          │                   │         │        │               <CIMul...
+          │                   │         │        └ 400
+          │                   │         └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=ARPAUSDRUSDT) [400 Bad Request]>
+          │                   │           <CIMul...
+          │                   └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=ARPAUSDRUSDT) [400 Bad Request]>
+          │                     <CIMul...
+          └ <class 'binance.exceptions.BinanceAPIException'>
+
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-03 09:50:55 | WARNING | data.collector:_fetch_history:48 | Symbol delisted or invalid: %s | {}
+2026-07-03 10:12:50 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'ALLOUSDT', 'order_id': '1822e0bd-cc48-4fbc-ac23-a31ff2e1b39c', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783073570433}}
+2026-07-03 12:02:55 | WARNING | data.collector:_fetch_history:48 | Symbol delisted or invalid: %s | {}
+2026-07-03 16:45:44 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'PIPPINUSDT', 'order_id': '0b0cc5fd-8d9b-49e2-846e-cd812607de17', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783097144848}}
+2026-07-03 18:50:34 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-03 18:59:48 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-03 19:52:47 | ERROR | trading.strategy2_live:_open_grid:659 | S2Live: failed to place limit order | {'symbol': 'MUSDT', 'index': 10, 'price': 1.5119, 'error': 'place_limit_order failed: retCode=110094 retMsg=Order does not meet minimum order value 5USDT symbol=MUSDT price=1.5119 qty=3.0'}
+2026-07-03 20:08:32 | ERROR | trading.strategy2_live:_open_grid:659 | S2Live: failed to place limit order | {'symbol': 'MUSDT', 'index': 10, 'price': 1.5104, 'error': 'place_limit_order failed: retCode=110094 retMsg=Order does not meet minimum order value 5USDT symbol=MUSDT price=1.5104 qty=3.0'}
+2026-07-03 20:26:41 | ERROR | trading.strategy2_live:_open_grid:659 | S2Live: failed to place limit order | {'symbol': 'MUSDT', 'index': 10, 'price': 1.51, 'error': 'place_limit_order failed: retCode=110094 retMsg=Order does not meet minimum order value 5USDT symbol=MUSDT price=1.51 qty=3.0'}
+2026-07-03 20:39:19 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'MUSDT', 'order_id': '9cc95e48-fb93-4f49-9ba1-d0ec984cfeec', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783111159441}}
+2026-07-03 20:55:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 20:55:58 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 20:57:31 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-03 21:01:25 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:01:52 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:01:54 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:02:22 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:02:23 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:03:03 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:03:04 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:06:09 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:06:53 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:07:07 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:07:40 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:08:05 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 21:24:23 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:24:34 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:24:55 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:25:06 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 21:25:17 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 22:13:12 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-03 23:08:21 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:08:32 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:08:43 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:08:54 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:20:52 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'ARPAUSDT', 'error': ''}
+2026-07-03 23:57:44 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:58:20 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-03 23:59:07 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:10:27 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'MAGMAUSDT', 'error': ''}
+2026-07-04 00:10:34 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:10:45 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:10:51 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'MAGMAUSDT', 'error': ''}
+2026-07-04 00:10:56 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:11:07 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:27:28 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:28:17 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:28:51 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 00:29:02 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 01:01:44 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 01:05:55 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 01:06:24 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 01:36:45 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HMSTRUSDT', 'level_price': 0.00024477, 'claude_prices': [0.00026, 0.00025, 0.00024]}
+2026-07-04 01:36:45 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HMSTRUSDT', 'level_price': 0.00025139, 'claude_prices': [0.00026, 0.00025, 0.00024]}
+2026-07-04 01:36:45 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HMSTRUSDT', 'level_price': 0.00025509, 'claude_prices': [0.00026, 0.00025, 0.00024]}
+2026-07-04 06:13:26 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'HMSTRUSDT', 'order_id': '19c4031b-dcb0-462b-81f4-abc9b570e06e', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783145606831}}
+2026-07-04 07:38:50 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'THEUSDT', 'order_id': 'e59466f4-67e0-464b-859b-0f07d7636032', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783150730348}}

@@ -1,0 +1,768 @@
+2026-07-04 11:56:14 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 12:13:29 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 12:20:17 | ERROR | trading.strategy2_live:_open_grid:583 | S2Live: failed to get instrument info | {'symbol': 'BASUSDT', 'error': 'instrument info not found for BASUSDT'}
+2026-07-04 15:23:03 | ERROR | trading.strategy2_live:_open_grid:793 | S2Live: failed to place SL order | {'symbol': 'TAIKOUSDT', 'trade_id': '0dedeacc-e9a0-4cc2-a3dc-6fe8df0f231d', 'error': 'place_stop_limit_order failed: retCode=10001 retMsg=Qty invalid symbol=TAIKOUSDT trigger=0.11375'}
+2026-07-04 15:36:54 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 15:37:44 | WARNING | trading.strategy2_live:_recalculate_params:2051 | S2Live: full grid SL update skipped — price already at/below new trigger, closing market immediately | {'trade_id': '90ade410-3787-41b8-85e6-259084b74f42', 'symbol': 'TACUSDT', 'current_price': 0.032925, 'sl_trigger': 0.033022}
+2026-07-04 16:02:27 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'OGNUSDT', 'error': ''}
+2026-07-04 16:02:57 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'OGNUSDT', 'error': ''}
+2026-07-04 16:13:11 | ERROR | __main__:_auto_screener_loop:309 | Error in auto screener loop | {'error': ''}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                             │        └ <function DataQueue.read at 0x70a4e7249f80>
+                             └ <aiohttp.client_proto.ResponseHandler object at 0x70a4b57b38f0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+          │    └ None
+          └ <aiohttp.client_proto.ResponseHandler object at 0x70a4b57b38f0>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x70a4e4f6f060>
+    │       └ <function run at 0x70a4e8ad4680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x70a4e4351d00>
+           │      └ <function Runner.run at 0x70a4e795bce0>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x70a4e7959940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x70a4e79598a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x70a4e795b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x70a4e802dbc0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b56b50f0>()>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b56b50f0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b56b50f0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b56b50f0>()>
+
+> File "/root/crypto_bot/main.py", line 177, in _auto_screener_loop
+    rows = await _run_screener()
+                 └ <function run_screener at 0x70a4e54f76a0>
+
+  File "/root/crypto_bot/analysis/screener.py", line 31, in run_screener
+    client = await AsyncClient.create()
+                   │           └ <classmethod(<function AsyncClient.create at 0x70a4e5f245e0>)>
+                   └ <class 'binance.async_client.AsyncClient'>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 110, in create
+    res = await self.get_server_time()
+                │    └ <function AsyncClient.get_server_time at 0x70a4e5f253a0>
+                └ <binance.async_client.AsyncClient object at 0x70a4e386f110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 346, in get_server_time
+    return await self._get("time")
+                 │    └ <function AsyncClient._get at 0x70a4e5f24ea0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4e386f110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+                 │    │                   │     │       │          └ {}
+                 │    │                   │     │       └ 'v3'
+                 │    │                   │     └ False
+                 │    │                   └ 'time'
+                 │    └ <function AsyncClient._request_api at 0x70a4e5f24900>
+                 └ <binance.async_client.AsyncClient object at 0x70a4e386f110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://api.binance.com/api/v3/time'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x70a4e5f247c0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4e386f110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 177, in _request
+    async with getattr(self.session, method)(
+                       │    │        └ 'get'
+                       │    └ <aiohttp.client.ClientSession object at 0x70a4b54daff0>
+                       └ <binance.async_client.AsyncClient object at 0x70a4e386f110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+    │    │                       │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                       └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b54d97e0>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b54d97e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+                 │       └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b537e510>
+                 └ <function ClientSession._request.<locals>._connect_and_send_request at 0x70a4e3863e20>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+          │    │     └ Connection<ConnectionKey(host='api.binance.com', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers_...
+          │    └ <function ClientResponse.start at 0x70a4e72d1440>
+          └ <ClientResponse(https://api.binance.com/api/v3/time) [None None]>
+            None
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 534, in start
+    with self._timer:
+         │    └ <aiohttp.helpers.TimerContext object at 0x70a4b53af520>
+         └ <ClientResponse(https://api.binance.com/api/v3/time) [None None]>
+           None
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+          │       │                 └ CancelledError()
+          │       └ <class 'TimeoutError'>
+          └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+TimeoutError
+2026-07-04 16:16:22 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:29:43 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:39:20 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:45:48 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'MUSDT', 'error': ''}
+2026-07-04 16:51:11 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:51:27 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:51:41 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:51:52 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:52:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:52:51 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:53:07 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:53:42 | ERROR | __main__:_auto_screener_loop:309 | Error in auto screener loop | {'error': ''}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+                 │       └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b554f950>
+                 └ <function ClientSession._request.<locals>._connect_and_send_request at 0x70a4b4d7e340>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+                 │    └ None
+                 └ <aiohttp.client.ClientSession object at 0x70a4b537e780>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+                  │    │                  │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                  │    │                  │    └ []
+                  │    │                  └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b554f950>
+                  │    └ <function TCPConnector._create_connection at 0x70a4e705e020>
+                  └ <aiohttp.connector.TCPConnector object at 0x70a4b54db9b0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+                     │    │                         │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                     │    │                         │    └ []
+                     │    │                         └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b554f950>
+                     │    └ <function TCPConnector._create_direct_connection at 0x70a4e705e7a0>
+                     └ <aiohttp.connector.TCPConnector object at 0x70a4b54db9b0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                          │    └ <function TCPConnector._wrap_create_connection at 0x70a4e705e200>
+                          └ <aiohttp.connector.TCPConnector object at 0x70a4b54db9b0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+                 │    │     │                  │       │            └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+                 │    │     │                  │       └ {'ssl': <ssl.SSLContext object at 0x70a4e72f4a50>, 'server_hostname': 'api.binance.com'}
+                 │    │     │                  └ (functools.partial(<class 'aiohttp.client_proto.ResponseHandler'>, loop=<_UnixSelectorEventLoop running=True closed=False deb...
+                 │    │     └ <function BaseEventLoop.create_connection at 0x70a4e795a840>
+                 │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.connector.TCPConnector object at 0x70a4b54db9b0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                                │    └ <function BaseEventLoop._create_connection_transport at 0x70a4e795a8e0>
+                                └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x70a4e4f6f060>
+    │       └ <function run at 0x70a4e8ad4680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x70a4e4351d00>
+           │      └ <function Runner.run at 0x70a4e795bce0>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x70a4e7959940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x70a4e79598a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x70a4e795b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x70a4e802dbc0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b554d600>()>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b554d600>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b554d600>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b554d600>()>
+
+> File "/root/crypto_bot/main.py", line 177, in _auto_screener_loop
+    rows = await _run_screener()
+                 └ <function run_screener at 0x70a4e54f76a0>
+
+  File "/root/crypto_bot/analysis/screener.py", line 31, in run_screener
+    client = await AsyncClient.create()
+                   │           └ <classmethod(<function AsyncClient.create at 0x70a4e5f245e0>)>
+                   └ <class 'binance.async_client.AsyncClient'>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 107, in create
+    await self.ping()
+          │    └ <function AsyncClient.ping at 0x70a4e5f25300>
+          └ <binance.async_client.AsyncClient object at 0x70a4b596cce0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 341, in ping
+    return await self._get("ping")
+                 │    └ <function AsyncClient._get at 0x70a4e5f24ea0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b596cce0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+                 │    │                   │     │       │          └ {}
+                 │    │                   │     │       └ 'v3'
+                 │    │                   │     └ False
+                 │    │                   └ 'ping'
+                 │    └ <function AsyncClient._request_api at 0x70a4e5f24900>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b596cce0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://api.binance.com/api/v3/ping'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x70a4e5f247c0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b596cce0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 177, in _request
+    async with getattr(self.session, method)(
+                       │    │        └ 'get'
+                       │    └ <aiohttp.client.ClientSession object at 0x70a4b537e780>
+                       └ <binance.async_client.AsyncClient object at 0x70a4b596cce0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+    │    │                       │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                       └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b554cf40>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b554cf40>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 624, in _request
+    with timer:
+         └ <aiohttp.helpers.TimerContext object at 0x70a4b57e72f0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+          │       │                 └ CancelledError()
+          │       └ <class 'TimeoutError'>
+          └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+TimeoutError
+2026-07-04 16:56:45 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 16:57:51 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:00:45 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:01:18 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:01:29 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:01:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:01:51 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:02:03 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:03:23 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:03:34 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:04:31 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:05:46 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:12:04 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:14:18 | ERROR | __main__:_auto_screener_loop:309 | Error in auto screener loop | {'error': ''}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                             │        └ <function DataQueue.read at 0x70a4e7249f80>
+                             └ <aiohttp.client_proto.ResponseHandler object at 0x70a4b4d4c2f0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+          │    └ None
+          └ <aiohttp.client_proto.ResponseHandler object at 0x70a4b4d4c2f0>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x70a4e4f6f060>
+    │       └ <function run at 0x70a4e8ad4680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x70a4e4351d00>
+           │      └ <function Runner.run at 0x70a4e795bce0>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x70a4e7959940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x70a4e79598a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x70a4e795b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x70a4e802dbc0>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+
+> File "/root/crypto_bot/main.py", line 177, in _auto_screener_loop
+    rows = await _run_screener()
+                 └ <function run_screener at 0x70a4e54f76a0>
+
+  File "/root/crypto_bot/analysis/screener.py", line 34, in run_screener
+    tickers = await client.futures_ticker()
+                    │      └ <function AsyncClient.futures_ticker at 0x70a4e5f2cc20>
+                    └ <binance.async_client.AsyncClient object at 0x70a4b5417140>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 2046, in futures_ticker
+    return await self._request_futures_api("get", "ticker/24hr", data=params)
+                 │    │                                               └ {}
+                 │    └ <function AsyncClient._request_futures_api at 0x70a4e5f249a0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b5417140>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 237, in _request_futures_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {'data': {}}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://fapi.binance.com/fapi/v1/ticker/24hr'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x70a4e5f247c0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b5417140>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 177, in _request
+    async with getattr(self.session, method)(
+                       │    │        └ 'get'
+                       │    └ <aiohttp.client.ClientSession object at 0x70a4b5760170>
+                       └ <binance.async_client.AsyncClient object at 0x70a4b5417140>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+    │    │                       │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                       └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b572c2e0>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b572c2e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+                 │       └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b5760350>
+                 └ <function ClientSession._request.<locals>._connect_and_send_request at 0x70a4b52c91c0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+          │    │     └ Connection<ConnectionKey(host='fapi.binance.com', port=443, is_ssl=True, ssl=True, proxy=None, proxy_auth=None, proxy_headers...
+          │    └ <function ClientResponse.start at 0x70a4e72d1440>
+          └ <ClientResponse(https://fapi.binance.com/fapi/v1/ticker/24hr) [None None]>
+            None
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 534, in start
+    with self._timer:
+         │    └ <aiohttp.helpers.TimerContext object at 0x70a4b57597c0>
+         └ <ClientResponse(https://fapi.binance.com/fapi/v1/ticker/24hr) [None None]>
+           None
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+          │       │                 └ CancelledError()
+          │       └ <class 'TimeoutError'>
+          └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+TimeoutError
+2026-07-04 17:18:45 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:21:54 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:22:11 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:27:01 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:28:11 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:29:59 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:32:14 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:33:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:35:37 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'BASUSDT', 'error': ''}
+2026-07-04 17:36:10 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:38:19 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:39:58 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:40:09 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:40:20 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:44:03 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:44:14 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:44:41 | ERROR | __main__:_auto_screener_loop:309 | Error in auto screener loop | {'error': ''}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+                 │       └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b7414b00>
+                 └ <function ClientSession._request.<locals>._connect_and_send_request at 0x70a4b57ef380>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+                 │    └ None
+                 └ <aiohttp.client.ClientSession object at 0x70a4b54daff0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+                  │    │                  │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                  │    │                  │    └ []
+                  │    │                  └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b7414b00>
+                  │    └ <function TCPConnector._create_connection at 0x70a4e705e020>
+                  └ <aiohttp.connector.TCPConnector object at 0x70a4b7417dd0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+                     │    │                         │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                     │    │                         │    └ []
+                     │    │                         └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b7414b00>
+                     │    └ <function TCPConnector._create_direct_connection at 0x70a4e705e7a0>
+                     └ <aiohttp.connector.TCPConnector object at 0x70a4b7417dd0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                          │    └ <function TCPConnector._wrap_create_connection at 0x70a4e705e200>
+                          └ <aiohttp.connector.TCPConnector object at 0x70a4b7417dd0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+                 │    │     │                  │       │            └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+                 │    │     │                  │       └ {'ssl': <ssl.SSLContext object at 0x70a4e72f4a50>, 'server_hostname': 'api.binance.com'}
+                 │    │     │                  └ (functools.partial(<class 'aiohttp.client_proto.ResponseHandler'>, loop=<_UnixSelectorEventLoop running=True closed=False deb...
+                 │    │     └ <function BaseEventLoop.create_connection at 0x70a4e795a840>
+                 │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.connector.TCPConnector object at 0x70a4b7417dd0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                                │    └ <function BaseEventLoop._create_connection_transport at 0x70a4e795a8e0>
+                                └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x70a4e4f6f060>
+    │       └ <function run at 0x70a4e8ad4680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x70a4e4351d00>
+           │      └ <function Runner.run at 0x70a4e795bce0>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x70a4e7959940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x70a4e79598a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x70a4e795b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x70a4e802dbc0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b7416fb0>()>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b7416fb0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b7416fb0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b7416fb0>()>
+
+> File "/root/crypto_bot/main.py", line 177, in _auto_screener_loop
+    rows = await _run_screener()
+                 └ <function run_screener at 0x70a4e54f76a0>
+
+  File "/root/crypto_bot/analysis/screener.py", line 31, in run_screener
+    client = await AsyncClient.create()
+                   │           └ <classmethod(<function AsyncClient.create at 0x70a4e5f245e0>)>
+                   └ <class 'binance.async_client.AsyncClient'>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 107, in create
+    await self.ping()
+          │    └ <function AsyncClient.ping at 0x70a4e5f25300>
+          └ <binance.async_client.AsyncClient object at 0x70a4b549ede0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 341, in ping
+    return await self._get("ping")
+                 │    └ <function AsyncClient._get at 0x70a4e5f24ea0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b549ede0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+                 │    │                   │     │       │          └ {}
+                 │    │                   │     │       └ 'v3'
+                 │    │                   │     └ False
+                 │    │                   └ 'ping'
+                 │    └ <function AsyncClient._request_api at 0x70a4e5f24900>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b549ede0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://api.binance.com/api/v3/ping'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x70a4e5f247c0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b549ede0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 177, in _request
+    async with getattr(self.session, method)(
+                       │    │        └ 'get'
+                       │    └ <aiohttp.client.ClientSession object at 0x70a4b54daff0>
+                       └ <binance.async_client.AsyncClient object at 0x70a4b549ede0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+    │    │                       │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                       └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b554cbb0>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b554cbb0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 624, in _request
+    with timer:
+         └ <aiohttp.helpers.TimerContext object at 0x70a4b5786210>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+          │       │                 └ CancelledError()
+          │       └ <class 'TimeoutError'>
+          └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+TimeoutError
+2026-07-04 17:45:16 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:47:33 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:47:45 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:48:21 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:52:24 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 17:52:35 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 18:21:06 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-04 19:09:16 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 01:06:55 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'OGNUSDT', 'order_id': '82c1f1c1-0237-4bf5-aa91-373edcf97a19', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783213615397}}
+2026-07-05 01:07:00 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'OGNUSDT', 'order_id': '08ad63a3-cdab-4935-a5c0-a2d8bdb569a1', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783213620453}}
+2026-07-05 01:11:04 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'OUSDT', 'order_id': '461404ae-c5b2-4143-ad2c-451afd58346e', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783213864654}}
+2026-07-05 01:49:22 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'MAGMAUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-05 03:18:01 | WARNING | trading.strategy2_live:_recalculate_params:2051 | S2Live: full grid SL update skipped — price already at/below new trigger, closing market immediately | {'trade_id': 'de278f1b-c5ff-4018-8ae2-f7a82d08c830', 'symbol': 'HMSTRUSDT', 'current_price': 0.000313, 'sl_trigger': 0.0003174}
+2026-07-05 04:56:13 | WARNING | trading.bybit_client:cancel_order:205 | bybit cancel_order unexpected response | {'symbol': 'OUSDT', 'order_id': 'd2abb704-b900-4fa9-a64e-76bfa57c7b5f', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1783227373770}}
+2026-07-05 06:02:16 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 06:03:41 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 07:18:10 | ERROR | trading.strategy2_live:_open_grid:583 | S2Live: failed to get instrument info | {'symbol': 'BASUSDT', 'error': 'instrument info not found for BASUSDT'}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.00033741, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.00034704, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.00035351, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.0003566, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.00036283, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 07:20:46 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'HOTUSDT', 'level_price': 0.0003664, 'claude_prices': [0.00038, 0.00037, 0.00036, 0.00035, 0.00034]}
+2026-07-05 09:07:05 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:25:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:25:52 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:29:04 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:29:15 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:30:25 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:30:36 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:32:34 | ERROR | __main__:_auto_screener_loop:309 | Error in auto screener loop | {'error': ''}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+                 │       └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b555d880>
+                 └ <function ClientSession._request.<locals>._connect_and_send_request at 0x70a4e1127920>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 734, in _connect_and_send_request
+    conn = await self._connector.connect(
+                 │    └ None
+                 └ <aiohttp.client.ClientSession object at 0x70a4b555ccb0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 672, in connect
+    proto = await self._create_connection(req, traces, timeout)
+                  │    │                  │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                  │    │                  │    └ []
+                  │    │                  └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b555d880>
+                  │    └ <function TCPConnector._create_connection at 0x70a4e705e020>
+                  └ <aiohttp.connector.TCPConnector object at 0x70a4b555c110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1239, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+                     │    │                         │    │       └ ClientTimeout(total=10, connect=None, sock_read=None, sock_connect=None, ceil_threshold=5)
+                     │    │                         │    └ []
+                     │    │                         └ <aiohttp.client_reqrep.ClientRequest object at 0x70a4b555d880>
+                     │    └ <function TCPConnector._create_direct_connection at 0x70a4e705e7a0>
+                     └ <aiohttp.connector.TCPConnector object at 0x70a4b555c110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1580, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                          │    └ <function TCPConnector._wrap_create_connection at 0x70a4e705e200>
+                          └ <aiohttp.connector.TCPConnector object at 0x70a4b555c110>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1313, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+                 │    │     │                  │       │            └ <socket.socket [closed] fd=-1, family=2, type=1, proto=6>
+                 │    │     │                  │       └ {'ssl': <ssl.SSLContext object at 0x70a4e72f4a50>, 'server_hostname': 'api.binance.com'}
+                 │    │     │                  └ (functools.partial(<class 'aiohttp.client_proto.ResponseHandler'>, loop=<_UnixSelectorEventLoop running=True closed=False deb...
+                 │    │     └ <function BaseEventLoop.create_connection at 0x70a4e795a840>
+                 │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.connector.TCPConnector object at 0x70a4b555c110>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1149, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                                │    └ <function BaseEventLoop._create_connection_transport at 0x70a4e795a8e0>
+                                └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1182, in _create_connection_transport
+    await waiter
+          └ <Future cancelled>
+
+asyncio.exceptions.CancelledError
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x70a4e4f6f060>
+    │       └ <function run at 0x70a4e8ad4680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x70a4e4351d00>
+           │      └ <function Runner.run at 0x70a4e795bce0>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x70a4e7959940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x70a4e43e45c0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x70a4e79598a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x70a4e795b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x70a4e802dbc0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b5146ce0>()>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b5146ce0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b5146ce0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x70a4b5146ce0>()>
+
+> File "/root/crypto_bot/main.py", line 177, in _auto_screener_loop
+    rows = await _run_screener()
+                 └ <function run_screener at 0x70a4e54f76a0>
+
+  File "/root/crypto_bot/analysis/screener.py", line 31, in run_screener
+    client = await AsyncClient.create()
+                   │           └ <classmethod(<function AsyncClient.create at 0x70a4e5f245e0>)>
+                   └ <class 'binance.async_client.AsyncClient'>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 107, in create
+    await self.ping()
+          │    └ <function AsyncClient.ping at 0x70a4e5f25300>
+          └ <binance.async_client.AsyncClient object at 0x70a4b572c4d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 341, in ping
+    return await self._get("ping")
+                 │    └ <function AsyncClient._get at 0x70a4e5f24ea0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b572c4d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+                 │    │                   │     │       │          └ {}
+                 │    │                   │     │       └ 'v3'
+                 │    │                   │     └ False
+                 │    │                   └ 'ping'
+                 │    └ <function AsyncClient._request_api at 0x70a4e5f24900>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b572c4d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://api.binance.com/api/v3/ping'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x70a4e5f247c0>
+                 └ <binance.async_client.AsyncClient object at 0x70a4b572c4d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 177, in _request
+    async with getattr(self.session, method)(
+                       │    │        └ 'get'
+                       │    └ <aiohttp.client.ClientSession object at 0x70a4b555ccb0>
+                       └ <binance.async_client.AsyncClient object at 0x70a4b572c4d0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+    │    │                       │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                       └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b5145d80>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x70a4b5145d80>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/client.py", line 624, in _request
+    with timer:
+         └ <aiohttp.helpers.TimerContext object at 0x70a4e38b54f0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 713, in __exit__
+    raise asyncio.TimeoutError from exc_val
+          │       │                 └ CancelledError()
+          │       └ <class 'TimeoutError'>
+          └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+TimeoutError
+2026-07-05 11:32:35 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:32:46 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:32:57 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:33:08 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:33:19 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:33:30 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:34:08 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:34:19 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:47:23 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:49:29 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:49:40 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:49:51 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-05 11:50:02 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}

@@ -1,0 +1,1013 @@
+2026-05-07 10:21:37,203 aiogram.dispatcher Start polling
+2026-05-07 10:21:37,985 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:21:38,372 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 10:21:39,660 aiogram.event Update id=243226103 is handled. Duration 931 ms by bot id=8552283359
+2026-05-07 10:21:48,653 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:21:56,078 aiogram.event Update id=243226104 is handled. Duration 750 ms by bot id=8552283359
+2026-05-07 10:21:59,285 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:22:09,913 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:22:20,542 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:22:31,159 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:22:41,922 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:22:52,546 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:23:03,172 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:23:13,788 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:23:17,099 aiogram.event Update id=243226105 is handled. Duration 315 ms by bot id=8552283359
+2026-05-07 10:23:24,426 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:23:35,044 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 10:23:40,286 aiogram.dispatcher Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-05-07 10:23:40,288 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 10:24:02,325 aiogram.dispatcher Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-05-07 10:24:02,326 aiogram.dispatcher Sleep for 1.309825 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 10:24:13,866 aiogram.dispatcher Connection established (tryings = 2, bot id = 8552283359)
+2026-05-07 10:24:41,619 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:24:41,944 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2026-05-07 10:24:41,946 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 136, in _sonnet_analyze
+    response = client.messages.create(
+        model=SONNET_MODEL,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": json.dumps(input_data)}],
+    )
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_utils\_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\resources\messages\messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.NotFoundError: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-sonnet-4-6-20250514'}, 'request_id': 'req_011CanotKaRYeYBrzJw7xZqR'}
+2026-05-07 10:24:42,073 aiogram.event Update id=243226106 is handled. Duration 1824 ms by bot id=8552283359
+2026-05-07 10:25:03,901 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:25:04,122 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2026-05-07 10:25:04,124 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 136, in _sonnet_analyze
+    response = client.messages.create(
+        model=SONNET_MODEL,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": json.dumps(input_data)}],
+    )
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_utils\_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\resources\messages\messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.NotFoundError: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-sonnet-4-6-20250514'}, 'request_id': 'req_011CanouxRzUdWatWdanwoY9'}
+2026-05-07 10:25:04,213 aiogram.event Update id=243226107 is handled. Duration 1818 ms by bot id=8552283359
+2026-05-07 10:27:55,592 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:27:55,878 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2026-05-07 10:27:55,880 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 136, in _sonnet_analyze
+    response = client.messages.create(
+        model=SONNET_MODEL,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": json.dumps(input_data)}],
+    )
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_utils\_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\resources\messages\messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.NotFoundError: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-sonnet-4-6-20250514'}, 'request_id': 'req_011Canp8cY2My2miWzZr8Cyp'}
+2026-05-07 10:27:55,974 aiogram.event Update id=243226108 is handled. Duration 1376 ms by bot id=8552283359
+2026-05-07 10:30:10,608 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:30:10,862 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 404 Not Found"
+2026-05-07 10:30:10,864 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 136, in _sonnet_analyze
+    response = client.messages.create(
+        model=SONNET_MODEL,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": json.dumps(input_data)}],
+    )
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_utils\_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\resources\messages\messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anthropic\_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.NotFoundError: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-sonnet-4-6-20250514'}, 'request_id': 'req_011CanpJZqLdqnCXnmcJrFvV'}
+2026-05-07 10:39:00,342 aiogram.dispatcher Start polling
+2026-05-07 10:39:00,622 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 10:39:28,867 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:39:32,017 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:39:32,115 aiogram.event Update id=243226109 is handled. Duration 4542 ms by bot id=8552283359
+2026-05-07 10:42:15,824 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:42:18,952 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:42:19,060 aiogram.event Update id=243226110 is handled. Duration 4236 ms by bot id=8552283359
+2026-05-07 10:44:38,883 aiogram.event Update id=243226111 is handled. Duration 1262 ms by bot id=8552283359
+2026-05-07 10:44:50,798 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:44:54,398 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:00,448 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:04,598 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:12,101 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:20,105 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:20,210 aiogram.event Update id=243226112 is handled. Duration 9086 ms by bot id=8552283359
+2026-05-07 10:45:26,535 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:30,886 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:37,029 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:39,851 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:46,082 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:49,110 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:55,437 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:45:58,859 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:04,985 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:08,068 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:14,333 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:19,166 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:25,219 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:31,272 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:34,694 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:41,294 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:45,306 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:51,245 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:46:57,228 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:00,344 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:06,462 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:11,035 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:17,323 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:20,669 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:27,645 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:31,985 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:38,233 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:43,919 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:50,370 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:47:54,003 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:00,243 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:06,117 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:32,248 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:35,086 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:41,168 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:44,105 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:50,459 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:48:53,684 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:49:19,809 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:49:23,643 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:49:30,006 aiogram.dispatcher Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-05-07 10:49:30,027 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 10:49:52,076 aiogram.dispatcher Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-05-07 10:49:52,076 aiogram.dispatcher Sleep for 1.310602 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 10:49:55,012 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:49:58,923 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:50:05,104 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:50:08,857 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:50:09,523 aiogram.dispatcher Connection established (tryings = 2, bot id = 8552283359)
+2026-05-07 10:51:10,398 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:13,910 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:20,035 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:22,616 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:28,804 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:32,516 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:38,759 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:44,160 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:50,259 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:52,620 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:51:58,766 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:02,540 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:23,658 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:34,995 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:41,193 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:49,620 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:52:53,585 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:53:04,892 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:53:08,780 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:15,419 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:20,388 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:26,658 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:31,078 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:37,354 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:42,817 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:49,238 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:55:55,655 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:01,933 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:06,393 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:17,776 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:22,635 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:29,072 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:34,230 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:40,729 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:48,760 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:55,469 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:56:59,241 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:57:06,214 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:57:09,662 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:26,090 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:30,925 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:37,171 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:41,301 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:47,532 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:51,668 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 10:59:58,113 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:00:01,236 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:07:14,716 aiogram.event Update id=243226113 is handled. Duration 1238 ms by bot id=8552283359
+2026-05-07 11:26:31,997 aiogram.dispatcher Start polling
+2026-05-07 11:26:32,847 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 11:26:33,040 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 11:26:43,537 data.collector Failed to create Binance client
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\data\collector.py", line 76, in start_collector
+    client = await AsyncClient.create()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 107, in create
+    await self.ping()
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 341, in ping
+    return await self._get("ping")
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 294, in _get
+    return await self._request_api("get", path, signed, version, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 229, in _request_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 199, in _request
+    return await self._handle_response(response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\binance\async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+binance.exceptions.BinanceAPIException: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2026-05-07 11:26:44,088 aiogram.dispatcher Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-05-07 11:26:44,105 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 11:27:07,511 aiogram.dispatcher Start polling
+2026-05-07 11:27:07,810 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 11:45:10,700 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:45:15,709 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:51:40,089 aiogram.event Update id=243226114 is handled. Duration 302 ms by bot id=8552283359
+2026-05-07 11:54:12,902 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:54:16,823 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 11:54:17,037 aiogram.event Update id=243226115 is handled. Duration 5179 ms by bot id=8552283359
+2026-05-07 12:07:47,577 aiogram.dispatcher Start polling
+2026-05-07 12:07:48,116 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 12:07:51,105 aiogram.event Update id=243226116 is handled. Duration 447 ms by bot id=8552283359
+2026-05-07 12:08:30,109 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:08:34,632 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:08:34,798 aiogram.event Update id=243226117 is handled. Duration 6317 ms by bot id=8552283359
+2026-05-07 12:09:27,313 aiogram.event Update id=243226118 is handled. Duration 189 ms by bot id=8552283359
+2026-05-07 12:09:59,245 aiogram.event Update id=243226119 is handled. Duration 149 ms by bot id=8552283359
+2026-05-07 12:15:11,937 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:15:23,483 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:15:24,753 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:15:28,350 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:15:29,493 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:15:29,686 aiogram.event Update id=243226120 is handled. Duration 6199 ms by bot id=8552283359
+2026-05-07 12:15:55,983 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:16:06,587 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:16:48,302 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:16:59,883 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:18:06,353 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:18:13,623 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:19:14,954 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:19:25,050 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:19:32,304 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:19:46,765 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:19:52,972 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:20:04,490 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:20:26,145 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:20:37,939 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:20:44,746 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:20:57,868 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:21:04,524 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:21:19,920 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:21:28,814 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:21:36,681 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:07,945 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:08,179 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 503 Service Unavailable"
+2026-05-07 12:22:08,180 anthropic._base_client Retrying request to /v1/messages in 0.403741 seconds
+2026-05-07 12:22:13,656 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:24,920 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:35,218 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:41,737 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:51,655 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:22:57,822 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:23:08,098 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:09,435 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:19,299 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:25,509 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:31,489 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:37,647 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:46,298 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:25:52,518 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:26:00,127 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:06,751 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:12,809 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:18,931 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:26,479 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:32,536 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:44,152 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:50,316 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:27:59,157 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:28:05,345 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:28:14,926 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:28:14,929 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 156, in _sonnet_analyze
+    results = _parse_json_response(text)
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 18, in _parse_json_response
+    return json.loads(match.group())
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 5 (char 4)
+2026-05-07 12:28:21,067 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:28:27,292 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:28:35,798 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:07,128 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:18,361 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:24,478 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:33,677 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:45,309 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:49,387 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:29:55,616 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:30:05,198 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:12,036 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:21,229 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:27,557 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:35,889 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:42,030 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:51,063 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:31:57,133 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:03,231 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:12,532 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:18,798 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:27,227 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:33,446 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:43,975 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:32:50,307 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:33:00,115 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:06,466 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:12,834 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:19,075 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:26,592 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:32,906 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:34:43,472 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:37:09,986 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:37:20,652 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:37:51,593 aiogram.event Update id=243226121 is handled. Duration 387 ms by bot id=8552283359
+2026-05-07 12:38:21,934 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:38:31,585 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:38:31,587 ai.claude_client Sonnet analysis failed
+Traceback (most recent call last):
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 156, in _sonnet_analyze
+    results = _parse_json_response(text)
+  File "C:\scripts\mark\trading_bot\ai\claude_client.py", line 18, in _parse_json_response
+    return json.loads(match.group())
+           ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Python\pythoncore-3.14-64\Lib\json\decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 1 column 5 (char 4)
+2026-05-07 12:38:37,769 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:38:48,200 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:38:54,499 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:39:07,094 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:39:43,352 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:39:57,053 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:03,260 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:13,757 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:19,957 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:34,547 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:45,950 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:40:58,791 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:42:10,190 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:42:22,307 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 12:47:37,100 aiogram.event Update id=243226122 is handled. Duration 134 ms by bot id=8552283359
+2026-05-07 12:48:15,471 aiogram.event Update id=243226123 is handled. Duration 133 ms by bot id=8552283359
+2026-05-07 13:19:46,937 aiogram.dispatcher Start polling
+2026-05-07 13:19:47,229 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 13:20:37,771 aiogram.event Update id=243226124 is handled. Duration 2567 ms by bot id=8552283359
+2026-05-07 13:30:09,715 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:30:17,141 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:43:51,867 aiogram.dispatcher Start polling
+2026-05-07 13:43:52,197 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 13:44:04,366 aiogram.event Update id=243226125 is handled. Duration 1966 ms by bot id=8552283359
+2026-05-07 13:44:45,859 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:44:51,214 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:44:51,335 aiogram.event Update id=243226126 is handled. Duration 6647 ms by bot id=8552283359
+2026-05-07 13:47:31,675 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:47:35,348 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:47:35,649 aiogram.event Update id=243226127 is handled. Duration 5081 ms by bot id=8552283359
+2026-05-07 13:47:42,098 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:47:46,646 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:48:23,019 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:48:27,848 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:49:29,239 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:49:34,778 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:49:41,029 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:49:45,614 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:49:52,074 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:02,123 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:08,416 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:17,792 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:44,131 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:51,671 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:50:57,928 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:51:04,750 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:09,971 aiogram.dispatcher Start polling
+2026-05-07 13:55:10,106 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 13:55:20,809 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:28,325 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:34,459 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:40,766 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:47,075 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:47,484 aiogram.event Update id=243226128 is handled. Duration 403 ms by bot id=8552283359
+2026-05-07 13:55:53,168 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:55:59,332 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:56:04,437 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:56:04,440 aiogram.event Update id=243226129 is handled. Duration 6361 ms by bot id=8552283359
+2026-05-07 13:56:10,794 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 13:56:16,909 aiogram.event Update id=243226130 is handled. Duration 154 ms by bot id=8552283359
+2026-05-07 13:56:29,726 aiogram.event Update id=243226131 is handled. Duration 141 ms by bot id=8552283359
+2026-05-07 13:58:20,247 aiogram.event Update id=243226132 is handled. Duration 157 ms by bot id=8552283359
+2026-05-07 13:58:35,255 aiogram.event Update id=243226133 is handled. Duration 148 ms by bot id=8552283359
+2026-05-07 13:58:43,901 aiogram.event Update id=243226134 is handled. Duration 146 ms by bot id=8552283359
+2026-05-07 14:01:23,213 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 14:01:27,094 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 14:01:27,477 aiogram.event Update id=243226135 is handled. Duration 5567 ms by bot id=8552283359
+2026-05-07 14:25:37,959 aiogram.dispatcher Start polling
+2026-05-07 14:25:38,022 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 14:26:18,229 aiogram.event Update id=243226136 is handled. Duration 221 ms by bot id=8552283359
+2026-05-07 14:26:38,472 aiogram.event Update id=243226137 is handled. Duration 103 ms by bot id=8552283359
+2026-05-07 14:26:53,624 aiogram.event Update id=243226138 is handled. Duration 81 ms by bot id=8552283359
+2026-05-07 14:27:22,342 aiogram.event Update id=243226139 is handled. Duration 88 ms by bot id=8552283359
+2026-05-07 15:32:34,849 aiogram.dispatcher Start polling
+2026-05-07 15:32:34,920 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 15:32:58,466 aiogram.event Update id=243226144 is handled. Duration 609 ms by bot id=8552283359
+2026-05-07 15:33:06,735 aiogram.event Update id=243226145 is handled. Duration 90 ms by bot id=8552283359
+2026-05-07 15:33:23,328 aiogram.event Update id=243226146 is not handled. Duration 0 ms by bot id=8552283359
+2026-05-07 15:37:42,033 aiogram.event Update id=243226147 is handled. Duration 133 ms by bot id=8552283359
+2026-05-07 15:40:53,318 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 15:40:53,507 aiogram.event Update id=243226148 is handled. Duration 1657 ms by bot id=8552283359
+2026-05-07 16:18:10,129 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:18:15,377 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:19:11,542 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:19:17,233 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:20:33,363 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:20:39,327 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:21:05,278 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:21:09,956 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:23:16,791 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:23:19,613 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:31,060 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:35,147 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:41,262 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:45,578 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:51,551 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:25:55,916 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:27:22,445 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:27:26,902 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:28:28,017 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:28:33,951 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:28:43,156 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:28:49,403 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:28:55,320 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:29:06,251 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:17,318 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:22,115 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:33,041 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:39,504 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:50,551 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:30:54,827 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:00,793 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:09,187 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:15,176 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:20,097 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:26,138 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:30,681 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:40,412 aiogram.dispatcher Start polling
+2026-05-07 16:31:40,484 aiogram.dispatcher Run polling for bot @markkrassbot id=8552283359 - 'mark'
+2026-05-07 16:31:40,549 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:31:40,550 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:31:41,670 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:46,265 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:48,017 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:52,408 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:52,462 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:31:52,475 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:31:54,029 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:58,480 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:59,393 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:31:59,397 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:31:59,398 aiogram.dispatcher Sleep for 1.263054 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:32:05,667 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:32:05,669 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:05,670 aiogram.dispatcher Sleep for 1.121834 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:32:05,927 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:32:12,036 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:32:12,041 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:12,041 aiogram.dispatcher Sleep for 1.810718 seconds and try again... (tryings = 2, bot id = 8552283359)
+2026-05-07 16:32:13,937 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:13,937 aiogram.dispatcher Sleep for 1.570111 seconds and try again... (tryings = 2, bot id = 8552283359)
+2026-05-07 16:32:18,583 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:18,583 aiogram.dispatcher Sleep for 2.495052 seconds and try again... (tryings = 3, bot id = 8552283359)
+2026-05-07 16:32:21,160 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:21,161 aiogram.dispatcher Sleep for 1.980489 seconds and try again... (tryings = 3, bot id = 8552283359)
+2026-05-07 16:32:26,221 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:26,221 aiogram.dispatcher Sleep for 3.190416 seconds and try again... (tryings = 4, bot id = 8552283359)
+2026-05-07 16:32:29,487 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:29,488 aiogram.dispatcher Sleep for 2.587312 seconds and try again... (tryings = 4, bot id = 8552283359)
+2026-05-07 16:32:35,145 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:35,145 aiogram.dispatcher Sleep for 4.210988 seconds and try again... (tryings = 5, bot id = 8552283359)
+2026-05-07 16:32:39,440 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:39,440 aiogram.dispatcher Sleep for 3.187114 seconds and try again... (tryings = 5, bot id = 8552283359)
+2026-05-07 16:32:42,698 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:42,699 aiogram.dispatcher Sleep for 5.326300 seconds and try again... (tryings = 6, bot id = 8552283359)
+2026-05-07 16:32:48,099 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:48,100 aiogram.dispatcher Sleep for 4.298670 seconds and try again... (tryings = 6, bot id = 8552283359)
+2026-05-07 16:32:52,472 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:52,473 aiogram.dispatcher Sleep for 4.976289 seconds and try again... (tryings = 7, bot id = 8552283359)
+2026-05-07 16:32:57,531 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:32:57,531 aiogram.dispatcher Sleep for 4.970332 seconds and try again... (tryings = 7, bot id = 8552283359)
+2026-05-07 16:33:02,585 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:02,586 aiogram.dispatcher Sleep for 5.122381 seconds and try again... (tryings = 8, bot id = 8552283359)
+2026-05-07 16:33:07,789 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:07,789 aiogram.dispatcher Sleep for 5.088923 seconds and try again... (tryings = 8, bot id = 8552283359)
+2026-05-07 16:33:12,951 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:12,952 aiogram.dispatcher Sleep for 5.207972 seconds and try again... (tryings = 9, bot id = 8552283359)
+2026-05-07 16:33:18,244 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:18,244 aiogram.dispatcher Sleep for 4.850212 seconds and try again... (tryings = 9, bot id = 8552283359)
+2026-05-07 16:33:23,173 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:23,173 aiogram.dispatcher Sleep for 4.996778 seconds and try again... (tryings = 10, bot id = 8552283359)
+2026-05-07 16:33:28,242 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:28,242 aiogram.dispatcher Sleep for 4.967329 seconds and try again... (tryings = 10, bot id = 8552283359)
+2026-05-07 16:33:33,283 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:33,284 aiogram.dispatcher Sleep for 5.317425 seconds and try again... (tryings = 11, bot id = 8552283359)
+2026-05-07 16:33:37,052 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:33:40,450 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:33:40,454 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:40,454 aiogram.dispatcher Sleep for 5.193185 seconds and try again... (tryings = 11, bot id = 8552283359)
+2026-05-07 16:33:45,717 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:45,718 aiogram.dispatcher Sleep for 5.153221 seconds and try again... (tryings = 12, bot id = 8552283359)
+2026-05-07 16:33:50,948 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:50,948 aiogram.dispatcher Sleep for 5.164943 seconds and try again... (tryings = 12, bot id = 8552283359)
+2026-05-07 16:33:56,182 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:33:56,183 aiogram.dispatcher Sleep for 5.014245 seconds and try again... (tryings = 13, bot id = 8552283359)
+2026-05-07 16:33:58,269 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:03,517 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:03,592 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:03,593 aiogram.dispatcher Sleep for 4.988402 seconds and try again... (tryings = 13, bot id = 8552283359)
+2026-05-07 16:34:08,654 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:08,654 aiogram.dispatcher Sleep for 5.193091 seconds and try again... (tryings = 14, bot id = 8552283359)
+2026-05-07 16:34:13,932 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:13,933 aiogram.dispatcher Sleep for 4.967273 seconds and try again... (tryings = 14, bot id = 8552283359)
+2026-05-07 16:34:18,981 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:18,982 aiogram.dispatcher Sleep for 5.137035 seconds and try again... (tryings = 15, bot id = 8552283359)
+2026-05-07 16:34:24,198 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:24,199 aiogram.dispatcher Sleep for 4.936152 seconds and try again... (tryings = 15, bot id = 8552283359)
+2026-05-07 16:34:29,212 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:29,212 aiogram.dispatcher Sleep for 5.138949 seconds and try again... (tryings = 16, bot id = 8552283359)
+2026-05-07 16:34:34,436 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:34,436 aiogram.dispatcher Sleep for 4.900923 seconds and try again... (tryings = 16, bot id = 8552283359)
+2026-05-07 16:34:39,571 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:41,473 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:44,908 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:44,911 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:44,911 aiogram.dispatcher Sleep for 5.070452 seconds and try again... (tryings = 17, bot id = 8552283359)
+2026-05-07 16:34:47,475 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:50,954 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:52,211 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:52,214 aiogram.dispatcher Connection established (tryings = 17, bot id = 8552283359)
+2026-05-07 16:34:56,246 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:34:56,315 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:34:56,316 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:34:58,159 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:04,383 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:04,450 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:04,451 aiogram.dispatcher Sleep for 5.059542 seconds and try again... (tryings = 18, bot id = 8552283359)
+2026-05-07 16:35:07,155 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:10,325 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:13,135 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:15,763 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:15,766 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:15,767 aiogram.dispatcher Sleep for 1.330328 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:35:17,549 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:17,552 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:17,552 aiogram.dispatcher Sleep for 5.178197 seconds and try again... (tryings = 19, bot id = 8552283359)
+2026-05-07 16:35:22,814 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:22,815 aiogram.dispatcher Sleep for 1.692293 seconds and try again... (tryings = 2, bot id = 8552283359)
+2026-05-07 16:35:27,578 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:27,579 aiogram.dispatcher Sleep for 5.078216 seconds and try again... (tryings = 20, bot id = 8552283359)
+2026-05-07 16:35:32,737 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:32,737 aiogram.dispatcher Sleep for 2.259804 seconds and try again... (tryings = 3, bot id = 8552283359)
+2026-05-07 16:35:38,075 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:38,075 aiogram.dispatcher Sleep for 5.023141 seconds and try again... (tryings = 21, bot id = 8552283359)
+2026-05-07 16:35:43,171 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:43,172 aiogram.dispatcher Sleep for 2.882340 seconds and try again... (tryings = 4, bot id = 8552283359)
+2026-05-07 16:35:49,138 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:49,138 aiogram.dispatcher Sleep for 5.077766 seconds and try again... (tryings = 22, bot id = 8552283359)
+2026-05-07 16:35:52,731 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:53,944 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:58,932 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:58,935 aiogram.dispatcher Connection established (tryings = 5, bot id = 8552283359)
+2026-05-07 16:35:59,515 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:35:59,586 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:35:59,586 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:36:03,671 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:03,672 aiogram.dispatcher Sleep for 5.089556 seconds and try again... (tryings = 23, bot id = 8552283359)
+2026-05-07 16:36:04,878 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:05,375 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:08,823 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:09,525 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:09,528 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:09,528 aiogram.dispatcher Sleep for 1.345643 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:36:13,951 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:13,952 aiogram.dispatcher Sleep for 4.986812 seconds and try again... (tryings = 24, bot id = 8552283359)
+2026-05-07 16:36:15,508 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:20,288 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:20,291 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:20,292 aiogram.dispatcher Sleep for 1.675475 seconds and try again... (tryings = 2, bot id = 8552283359)
+2026-05-07 16:36:22,041 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:22,042 aiogram.dispatcher Sleep for 4.963456 seconds and try again... (tryings = 25, bot id = 8552283359)
+2026-05-07 16:36:26,277 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:27,090 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:27,091 aiogram.dispatcher Sleep for 2.212283 seconds and try again... (tryings = 3, bot id = 8552283359)
+2026-05-07 16:36:32,272 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:32,373 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:32,374 aiogram.dispatcher Sleep for 5.007805 seconds and try again... (tryings = 26, bot id = 8552283359)
+2026-05-07 16:36:37,459 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:37,460 aiogram.dispatcher Sleep for 2.844461 seconds and try again... (tryings = 4, bot id = 8552283359)
+2026-05-07 16:36:39,935 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:36:43,382 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:43,382 aiogram.dispatcher Sleep for 4.992792 seconds and try again... (tryings = 27, bot id = 8552283359)
+2026-05-07 16:36:48,455 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:48,455 aiogram.dispatcher Sleep for 3.703243 seconds and try again... (tryings = 5, bot id = 8552283359)
+2026-05-07 16:36:52,229 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:52,229 aiogram.dispatcher Sleep for 5.062569 seconds and try again... (tryings = 28, bot id = 8552283359)
+2026-05-07 16:36:57,365 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:36:57,365 aiogram.dispatcher Sleep for 4.839968 seconds and try again... (tryings = 6, bot id = 8552283359)
+2026-05-07 16:37:02,275 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:02,275 aiogram.dispatcher Sleep for 5.091029 seconds and try again... (tryings = 29, bot id = 8552283359)
+2026-05-07 16:37:08,396 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:10,969 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:13,453 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:13,457 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:13,457 aiogram.dispatcher Sleep for 4.857925 seconds and try again... (tryings = 7, bot id = 8552283359)
+2026-05-07 16:37:14,965 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:17,449 aiogram.dispatcher Connection established (tryings = 30, bot id = 8552283359)
+2026-05-07 16:37:18,387 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:18,388 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:37:19,390 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:21,094 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:22,466 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:22,468 aiogram.dispatcher Sleep for 5.227180 seconds and try again... (tryings = 8, bot id = 8552283359)
+2026-05-07 16:37:25,853 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:27,773 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:27,774 aiogram.dispatcher Sleep for 1.351434 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:37:30,395 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:31,801 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:35,822 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:35,826 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:35,826 aiogram.dispatcher Sleep for 5.049233 seconds and try again... (tryings = 9, bot id = 8552283359)
+2026-05-07 16:37:36,074 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:39,199 aiogram.dispatcher Connection established (tryings = 2, bot id = 8552283359)
+2026-05-07 16:37:41,768 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:42,016 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:42,019 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:42,019 aiogram.dispatcher Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8552283359)
+2026-05-07 16:37:46,094 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:46,094 aiogram.dispatcher Sleep for 5.264218 seconds and try again... (tryings = 10, bot id = 8552283359)
+2026-05-07 16:37:47,710 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:47,937 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:51,438 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:51,439 aiogram.dispatcher Sleep for 1.394002 seconds and try again... (tryings = 1, bot id = 8552283359)
+2026-05-07 16:37:53,666 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:53,881 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:37:55,913 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:37:55,913 aiogram.dispatcher Sleep for 5.013606 seconds and try again... (tryings = 11, bot id = 8552283359)
+2026-05-07 16:37:59,670 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:38:01,002 aiogram.dispatcher Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-07 16:38:01,002 aiogram.dispatcher Sleep for 1.764985 seconds and try again... (tryings = 2, bot id = 8552283359)
+2026-05-07 16:38:05,594 httpx HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-05-07 16:38:11,006 aiogram.dispatcher Connection established (tryings = 12, bot id = 8552283359)

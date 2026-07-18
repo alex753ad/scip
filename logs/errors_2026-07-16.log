@@ -1,0 +1,265 @@
+2026-07-16 07:23:41 | WARNING | trading.strategy5_live:_finalize_closed:320 | S5Live: no executions, PnL estimated | {'trade_id': '61819432-0483-4a23-b819-515a6ea89aaa'}
+2026-07-16 08:16:05 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'RAVEUSDT', 'order_id': '1213a7da-08c1-470e-85f4-a27bd2ea6010', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784189765810}}
+2026-07-16 08:16:12 | WARNING | trading.strategy2_live:_realized_pnl_from_executions:1888 | S2Live: buy/sell qty mismatch on close — PnL booked on matched qty only, remainder left for reconcile | {'trade_id': 'c7aca8ad-6521-48af-a100-3474563c1caf', 'symbol': 'RAVEUSDT', 'buy_qty': 642.0, 'sell_qty': 321.0, 'matched_qty': 321.0}
+2026-07-16 10:31:14 | ERROR | __main__:_startup_monitoring:1665 | Error starting monitoring for symbol on startup | {'symbol': '➖ УБРАТЬUSDT', 'error': 'APIError(code=-1121): Invalid symbol.'}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7a22e754ad40>
+    │       └ <function run at 0x7a22ead5c680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7a22e6929e40>
+           │      └ <function Runner.run at 0x7a22e9e53ce0>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7a22e9e51940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7a22e9e518a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7a22e9e536a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7a22e9fa1bc0>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+> File "/root/crypto_bot/main.py", line 1544, in _startup_monitoring
+    raw_15m = await client.futures_klines(symbol=symbol, interval="15m", limit=500)
+                    │      │                     └ '➖ УБРАТЬUSDT'
+                    │      └ <function AsyncClient.futures_klines at 0x7a22e86f8400>
+                    └ <binance.async_client.AsyncClient object at 0x7a22ba303350>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 1956, in futures_klines
+    return await self._request_futures_api("get", "klines", data=params)
+                 │    │                                          └ {'symbol': '➖ УБРАТЬUSDT', 'interval': '15m', 'limit': 500}
+                 │    └ <function AsyncClient._request_futures_api at 0x7a22e86f09a0>
+                 └ <binance.async_client.AsyncClient object at 0x7a22ba303350>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 237, in _request_futures_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {'data': {'symbol': '➖ УБРАТЬUSDT', 'interval': '15m', 'limit': 500}}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://fapi.binance.com/fapi/v1/klines'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x7a22e86f07c0>
+                 └ <binance.async_client.AsyncClient object at 0x7a22ba303350>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 199, in _request
+    return await self._handle_response(response)
+                 │    │                └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+                 │    └ <function AsyncClient._handle_response at 0x7a22e86f0860>
+                 └ <binance.async_client.AsyncClient object at 0x7a22ba303350>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+          │                   │         │        │             │        └ <function ClientResponse.text at 0x7a22e9819d00>
+          │                   │         │        │             └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          │                   │         │        └ 400
+          │                   │         └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          │                   └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          └ <class 'binance.exceptions.BinanceAPIException'>
+
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-16 11:12:27 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'LABUSDT', 'order_id': 'c66d0bf6-478b-452a-844e-1dd8fdaf4f1f', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784200347437}}
+2026-07-16 16:44:22 | WARNING | trading.strategy5_live:_finalize_closed:320 | S5Live: no executions, PnL estimated | {'trade_id': 'e1fed462-2933-4b94-8575-0d910dd71efd'}
+2026-07-16 17:04:51 | WARNING | trading.strategy5_live:_open_live:137 | S5Live: no instrument info, skip | {'symbol': 'MANTRAUSDT'}
+2026-07-16 17:16:07 | WARNING | data.collector:_stream_agg_trades:180 | Failed to create aggTrades client | {'symbol': 'AKEUSDT', 'error': 'Cannot connect to host api.binance.com:443 ssl:default [Connection reset by peer]'}
+2026-07-16 21:32:41 | ERROR | bot.telegram:send_message:1453 | Failed to send Telegram message | {}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7a22e754ad40>
+    │       └ <function run at 0x7a22ead5c680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7a22e6929e40>
+           │      └ <function Runner.run at 0x7a22e9e53ce0>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7a22e9e51940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7a22e9e518a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7a22e9e536a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7a22e9fa1bc0>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/root/crypto_bot/main.py", line 358, in _trigger_loop
+    await _run_phase1(symbol)
+          │           └ 'AKEUSDT'
+          └ <function _run_phase1 at 0x7a22e7ad37e0>
+
+  File "/root/crypto_bot/main.py", line 577, in _run_phase1
+    await send_message(
+          └ <function send_message at 0x7a22e7906de0>
+
+> File "/root/crypto_bot/bot/telegram.py", line 1451, in send_message
+    await bot.send_message(TELEGRAM_CHAT_ID, text, reply_markup=get_main_keyboard())
+          │   │            │                 │                  └ <function get_main_keyboard at 0x7a22e79907c0>
+          │   │            │                 └ '🔄 AKEUSDT найден уровень ближе к цене\n   Старый: 0.0009266 → Новый: 0.0009295\n   Старый будет следующим после пробоя'
+          │   │            └ 1093360044
+          │   └ <function Bot.send_message at 0x7a22e77bb920>
+          └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2928, in send_message
+    return await self(call, request_timeout=request_timeout)
+                 │    │                     └ None
+                 │    └ SendMessage(chat_id=1093360044, text='🔄 AKEUSDT найден уровень ближе к цене\n   Старый: 0.0009266 → Новый: 0.0009295\n   Стар...
+                 └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 493, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+                 │    │       │     │               └ None
+                 │    │       │     └ SendMessage(chat_id=1093360044, text='🔄 AKEUSDT найден уровень ближе к цене\n   Старый: 0.0009266 → Новый: 0.0009295\n   Стар...
+                 │    │       └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+                 │    └ <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a22e5f5d2b0>
+                 └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+           │    │                   │          │    └ SendMessage(chat_id=1093360044, text='🔄 AKEUSDT найден уровень ближе к цене\n   Старый: 0.0009266 → Новый: 0.0009295\n   Стар...
+           │    │                   │          └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+           │    │                   └ functools.partial(<bound method AiohttpSession.make_request of <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a2...
+           │    └ ~TelegramType
+           └ <function cast at 0x7a22e9e2b380>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               │    └ <function BaseSession.check_response at 0x7a22e7627c40>
+               └ <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a22e5f5d2b0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 135, in check_response
+    raise TelegramServerError(method=method, message=description)
+          │                          │               └ 'Bad Gateway'
+          │                          └ SendMessage(chat_id=1093360044, text='🔄 AKEUSDT найден уровень ближе к цене\n   Старый: 0.0009266 → Новый: 0.0009295\n   Стар...
+          └ <class 'aiogram.exceptions.TelegramServerError'>
+
+aiogram.exceptions.TelegramServerError: Telegram server says - Bad Gateway
+2026-07-16 21:32:41 | ERROR | bot.telegram:send_message:1453 | Failed to send Telegram message | {}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7a22e754ad40>
+    │       └ <function run at 0x7a22ead5c680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7a22e6929e40>
+           │      └ <function Runner.run at 0x7a22e9e53ce0>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7a22e9e51940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7a22e69c04d0>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7a22e9e518a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7a22e9e536a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7a22e9fa1bc0>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/root/crypto_bot/main.py", line 358, in _trigger_loop
+    await _run_phase1(symbol)
+          │           └ 'AKEUSDT'
+          └ <function _run_phase1 at 0x7a22e7ad37e0>
+
+  File "/root/crypto_bot/main.py", line 651, in _run_phase1
+    await send_message(text)
+          │            └ '📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отбой): 94% | прокол ~0.8%\n   💊 Pump he...
+          └ <function send_message at 0x7a22e7906de0>
+
+> File "/root/crypto_bot/bot/telegram.py", line 1451, in send_message
+    await bot.send_message(TELEGRAM_CHAT_ID, text, reply_markup=get_main_keyboard())
+          │   │            │                 │                  └ <function get_main_keyboard at 0x7a22e79907c0>
+          │   │            │                 └ '📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отбой): 94% | прокол ~0.8%\n   💊 Pump he...
+          │   │            └ 1093360044
+          │   └ <function Bot.send_message at 0x7a22e77bb920>
+          └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2928, in send_message
+    return await self(call, request_timeout=request_timeout)
+                 │    │                     └ None
+                 │    └ SendMessage(chat_id=1093360044, text='📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отб...
+                 └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 493, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+                 │    │       │     │               └ None
+                 │    │       │     └ SendMessage(chat_id=1093360044, text='📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отб...
+                 │    │       └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+                 │    └ <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a22e5f5d2b0>
+                 └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+           │    │                   │          │    └ SendMessage(chat_id=1093360044, text='📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отб...
+           │    │                   │          └ <aiogram.client.bot.Bot object at 0x7a22e5f5c260>
+           │    │                   └ functools.partial(<bound method AiohttpSession.make_request of <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a2...
+           │    └ ~TelegramType
+           └ <function cast at 0x7a22e9e2b380>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               │    └ <function BaseSession.check_response at 0x7a22e7627c40>
+               └ <aiogram.client.session.aiohttp.AiohttpSession object at 0x7a22e5f5d2b0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 135, in check_response
+    raise TelegramServerError(method=method, message=description)
+          │                          │               └ 'Bad Gateway'
+          │                          └ SendMessage(chat_id=1093360044, text='📋 AKEUSDT новый уровень после пампа\n   ⭐️⭐️⭐️ 0.0009295 — pump_base (3.3%)\n   🤖 P(отб...
+          └ <class 'aiogram.exceptions.TelegramServerError'>
+
+aiogram.exceptions.TelegramServerError: Telegram server says - Bad Gateway
+2026-07-17 00:52:23 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-17 00:52:34 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-17 00:53:42 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-17 00:54:02 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}
+2026-07-17 05:00:32 | ERROR | trading.strategy2_live:_open_grid:581 | S2Live: failed to get instrument info | {'symbol': 'DODOXUSDT', 'error': 'instrument info not found for DODOXUSDT'}

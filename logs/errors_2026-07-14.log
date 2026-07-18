@@ -1,0 +1,342 @@
+2026-07-14 08:47:35 | ERROR | bot.telegram:btn_add_symbol_input:155 | Failed to load candles for added symbol | {'symbol': '➖ УБРАТЬUSDT', 'error': 'APIError(code=-1121): Invalid symbol.'}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7f0f52c76d40>
+    │       └ <function run at 0x7f0f5655c680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7f0f52059e40>
+           │      └ <function Runner.run at 0x7f0f5563bce0>
+           └ <asyncio.runners.Runner object at 0x7f0f520f4680>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f0f55639940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f0f520f4680>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f0f556398a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f0f5563b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f0f557a9bc0>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+                     │    │           │    │         └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,)}
+                     │    │           │    └ Update(update_id=243228618, message=Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)...
+                     │    │           └ <aiogram.client.bot.Bot object at 0x7f0f5158c4d0>
+                     │    └ <function Dispatcher.feed_update at 0x7f0f52f10220>
+                     └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+                     │    │      └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                     │    └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520c9fd0>
+                     └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228618, message=Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)...
+                 └ functools.partial(<aiogram.dispatcher.middlewares.user_context.UserContextMiddleware object at 0x7f0f5207d6d0>, functools.par...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228618, message=Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)...
+                 └ functools.partial(<aiogram.fsm.middleware.FSMContextMiddleware object at 0x7f0f520ca0f0>, <function TelegramEventObserver.tri...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228618, message=Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)...
+                 └ <function TelegramEventObserver.trigger at 0x7f0f504311c0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │             └ Update(update_id=243228618, message=Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)...
+                 └ <function CallableObject.call at 0x7f0f5090f1a0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<bound method Dispatcher._listen_update of <Dispatcher '0x7f0f53c848c0'>>, Update(update_id=243228618, mess...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+                 │    │                           │                  │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │    │                           │                  └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                 │    │                           └ 'message'
+                 │    └ <function Router.propagate_event at 0x7f0f52f11120>
+                 └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7f0f49f66c00>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f53f9d310>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7f0f52f11080>
+                 └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 191, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+                     │      │                           │                  │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                     │      │                           │                  └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                     │      │                           └ 'message'
+                     │      └ <function Router.propagate_event at 0x7f0f52f11120>
+                     └ <Router '0x7f0f520ca270'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7f0f499b5800>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520ca1e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7f0f52f11080>
+                 └ <Router '0x7f0f520ca270'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 183, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+                     │        │       │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                     │        │       └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                     │        └ <function TelegramEventObserver.trigger at 0x7f0f52f136a0>
+                     └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520ca1e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │             └ Message(message_id=43380, date=datetime.datetime(2026, 7, 14, 8, 47, 34, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pr...
+                 └ <function CallableObject.call at 0x7f0f499b5a80>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<function btn_add_symbol_input at 0x7f0f5309a0c0>, Message(message_id=43380, date=datetime.datetime(2026, 7...
+
+> File "/root/crypto_bot/bot/telegram.py", line 147, in btn_add_symbol_input
+    raw_15m = await client.futures_klines(symbol=symbol, interval="15m", limit=500)
+                    │      │                     └ '➖ УБРАТЬUSDT'
+                    │      └ <function AsyncClient.futures_klines at 0x7f0f53bc4400>
+                    └ <binance.async_client.AsyncClient object at 0x7f0f4998fd70>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 1956, in futures_klines
+    return await self._request_futures_api("get", "klines", data=params)
+                 │    │                                          └ {'symbol': '➖ УБРАТЬUSDT', 'interval': '15m', 'limit': 500}
+                 │    └ <function AsyncClient._request_futures_api at 0x7f0f53bb89a0>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f4998fd70>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 237, in _request_futures_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {'data': {'symbol': '➖ УБРАТЬUSDT', 'interval': '15m', 'limit': 500}}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://fapi.binance.com/fapi/v1/klines'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x7f0f53bb87c0>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f4998fd70>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 199, in _request
+    return await self._handle_response(response)
+                 │    │                └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+                 │    └ <function AsyncClient._handle_response at 0x7f0f53bb8860>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f4998fd70>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+          │                   │         │        │             │        └ <function ClientResponse.text at 0x7f0f54f99d00>
+          │                   │         │        │             └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          │                   │         │        └ 400
+          │                   │         └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          │                   └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=%E2%9E%96%20%D0%A3%D0%91%D0%A0%D0%90%D0...
+          └ <class 'binance.exceptions.BinanceAPIException'>
+
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-14 08:48:06 | ERROR | bot.telegram:btn_add_symbol_input:155 | Failed to load candles for added symbol | {'symbol': 'XECUSDT', 'error': 'APIError(code=-1121): Invalid symbol.'}
+Traceback (most recent call last):
+
+  File "/root/crypto_bot/main.py", line 2007, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x7f0f52c76d40>
+    │       └ <function run at 0x7f0f5655c680>
+    └ <module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7f0f52059e40>
+           │      └ <function Runner.run at 0x7f0f5563bce0>
+           └ <asyncio.runners.Runner object at 0x7f0f520f4680>
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /root/crypto_bot/main.py:1988> wait_for=<_GatheringFuture pending cb=[Tas...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f0f55639940>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f0f520f4680>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f0f556398a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f0f5563b6a0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f0f557a9bc0>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Task finishe...> result=None>)>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+                     │    │           │    │         └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,)}
+                     │    │           │    └ Update(update_id=243228620, message=Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0))...
+                     │    │           └ <aiogram.client.bot.Bot object at 0x7f0f5158c4d0>
+                     │    └ <function Dispatcher.feed_update at 0x7f0f52f10220>
+                     └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+                     │    │      └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                     │    └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520c9fd0>
+                     └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228620, message=Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0))...
+                 └ functools.partial(<aiogram.dispatcher.middlewares.user_context.UserContextMiddleware object at 0x7f0f5207d6d0>, functools.par...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228620, message=Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0))...
+                 └ functools.partial(<aiogram.fsm.middleware.FSMContextMiddleware object at 0x7f0f520ca0f0>, <function TelegramEventObserver.tri...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+                 │       │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │       └ Update(update_id=243228620, message=Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0))...
+                 └ <function TelegramEventObserver.trigger at 0x7f0f49ee6e80>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │             └ Update(update_id=243228620, message=Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0))...
+                 └ <function CallableObject.call at 0x7f0f499b5a80>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<bound method Dispatcher._listen_update of <Dispatcher '0x7f0f53c848c0'>>, Update(update_id=243228620, mess...
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+                 │    │                           │                  │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │    │                           │                  └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │    │                           └ 'message'
+                 │    └ <function Router.propagate_event at 0x7f0f52f11120>
+                 └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7f0f499b5800>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f53f9d310>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7f0f52f11080>
+                 └ <Dispatcher '0x7f0f53c848c0'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 191, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+                     │      │                           │                  │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                     │      │                           │                  └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                     │      │                           └ 'message'
+                     │      └ <function Router.propagate_event at 0x7f0f52f11120>
+                     └ <Router '0x7f0f520ca270'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 163, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+                 │        │                     │               │           └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │        │                     │               └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 │        │                     └ <function Router.propagate_event.<locals>._wrapped at 0x7f0f50465260>
+                 │        └ <function TelegramEventObserver.wrap_outer_middleware at 0x7f0f52f137e0>
+                 └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520ca1e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 155, in _wrapped
+    return await self._propagate_event(
+                 │    └ <function Router._propagate_event at 0x7f0f52f11080>
+                 └ <Router '0x7f0f520ca270'>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 183, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+                     │        │       │        └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                     │        │       └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                     │        └ <function TelegramEventObserver.trigger at 0x7f0f52f136a0>
+                     └ <aiogram.dispatcher.event.telegram.TelegramEventObserver object at 0x7f0f520ca1e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+                 │             │      └ {'dispatcher': <Dispatcher '0x7f0f53c848c0'>, 'bots': (<aiogram.client.bot.Bot object at 0x7f0f5158c4d0>,), 'bot': <aiogram.c...
+                 │             └ Message(message_id=43385, date=datetime.datetime(2026, 7, 14, 8, 48, 5, tzinfo=TzInfo(0)), chat=Chat(id=1093360044, type='pri...
+                 └ <function CallableObject.call at 0x7f0f50328040>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+                 └ functools.partial(<function btn_add_symbol_input at 0x7f0f5309a0c0>, Message(message_id=43385, date=datetime.datetime(2026, 7...
+
+> File "/root/crypto_bot/bot/telegram.py", line 147, in btn_add_symbol_input
+    raw_15m = await client.futures_klines(symbol=symbol, interval="15m", limit=500)
+                    │      │                     └ 'XECUSDT'
+                    │      └ <function AsyncClient.futures_klines at 0x7f0f53bc4400>
+                    └ <binance.async_client.AsyncClient object at 0x7f0f1880a7e0>
+
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 1956, in futures_klines
+    return await self._request_futures_api("get", "klines", data=params)
+                 │    │                                          └ {'symbol': 'XECUSDT', 'interval': '15m', 'limit': 500}
+                 │    └ <function AsyncClient._request_futures_api at 0x7f0f53bb89a0>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f1880a7e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 237, in _request_futures_api
+    return await self._request(method, uri, signed, force_params, **kwargs)
+                 │    │        │       │    │       │               └ {'data': {'symbol': 'XECUSDT', 'interval': '15m', 'limit': 500}}
+                 │    │        │       │    │       └ False
+                 │    │        │       │    └ False
+                 │    │        │       └ 'https://fapi.binance.com/fapi/v1/klines'
+                 │    │        └ 'get'
+                 │    └ <function AsyncClient._request at 0x7f0f53bb87c0>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f1880a7e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 199, in _request
+    return await self._handle_response(response)
+                 │    │                └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=XECUSDT) [400 Bad Request]>
+                 │    │                  <CIMultiDic...
+                 │    └ <function AsyncClient._handle_response at 0x7f0f53bb8860>
+                 └ <binance.async_client.AsyncClient object at 0x7f0f1880a7e0>
+  File "/root/crypto_bot/venv/lib/python3.12/site-packages/binance/async_client.py", line 207, in _handle_response
+    raise BinanceAPIException(response, response.status, await response.text())
+          │                   │         │        │             │        └ <function ClientResponse.text at 0x7f0f54f99d00>
+          │                   │         │        │             └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=XECUSDT) [400 Bad Request]>
+          │                   │         │        │               <CIMultiDic...
+          │                   │         │        └ 400
+          │                   │         └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=XECUSDT) [400 Bad Request]>
+          │                   │           <CIMultiDic...
+          │                   └ <ClientResponse(https://fapi.binance.com/fapi/v1/klines?interval=15m&limit=500&symbol=XECUSDT) [400 Bad Request]>
+          │                     <CIMultiDic...
+          └ <class 'binance.exceptions.BinanceAPIException'>
+
+binance.exceptions.BinanceAPIException: APIError(code=-1121): Invalid symbol.
+2026-07-14 20:28:24 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'SXTUSDT', 'order_id': 'b9c1aa72-d3e5-43f7-8fb5-4ccdf53bc598', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784060904099}}
+2026-07-14 21:38:44 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'SXTUSDT', 'order_id': '59fae4ca-1c23-4285-ba40-cefdd893597e', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784065124628}}
+2026-07-14 22:46:31 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'LABUSDT', 'order_id': '83f5a98c-0cdd-4f87-8b0c-c74b52a8e77f', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784069191613}}
+2026-07-14 22:46:34 | WARNING | trading.strategy2_live:_realized_pnl_from_executions:1888 | S2Live: buy/sell qty mismatch on close — PnL booked on matched qty only, remainder left for reconcile | {'trade_id': '56a5b5ef-2bc8-4e20-94ef-b948d10a993f', 'symbol': 'LABUSDT', 'buy_qty': 372.0, 'sell_qty': 186.0, 'matched_qty': 186.0}
+2026-07-14 23:14:55 | WARNING | trading.strategy5_live:_open_live:137 | S5Live: no instrument info, skip | {'symbol': 'DODOXUSDT'}
+2026-07-15 01:43:23 | ERROR | trading.strategy2_live:_open_grid:787 | S2Live: failed to place SL order | {'symbol': 'EVAAUSDT', 'trade_id': 'ef6fac0f-bc82-4413-a779-6b1da8e8cda2', 'error': 'place_stop_market_order failed: retCode=10001 retMsg=Qty invalid symbol=EVAAUSDT trigger=1.0263'}
+2026-07-15 01:51:57 | WARNING | trading.strategy5_live:_open_live:137 | S5Live: no instrument info, skip | {'symbol': 'DODOXUSDT'}
+2026-07-15 02:47:02 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'TRIAUSDT', 'order_id': 'fa16d9a4-1ff4-4c53-9434-14baa05d0935', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784083622428}}
+2026-07-15 02:47:05 | WARNING | trading.strategy2_live:_realized_pnl_from_executions:1888 | S2Live: buy/sell qty mismatch on close — PnL booked on matched qty only, remainder left for reconcile | {'trade_id': 'f600d6ef-fe2c-49f3-9b0d-2bac6e311217', 'symbol': 'TRIAUSDT', 'buy_qty': 11010.0, 'sell_qty': 5500.0, 'matched_qty': 5500.0}
+2026-07-15 03:52:05 | WARNING | trading.strategy5_live:_open_live:137 | S5Live: no instrument info, skip | {'symbol': 'DODOXUSDT'}
+2026-07-15 05:56:20 | WARNING | trading.strategy5_live:_finalize_closed:320 | S5Live: no executions, PnL estimated | {'trade_id': '5dc6dcf5-aa28-447a-895c-22648366adea'}
+2026-07-15 06:07:40 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'AKEUSDT', 'level_price': 0.00030514, 'claude_prices': [0.00035, 0.00032, 0.00031]}
+2026-07-15 06:07:40 | WARNING | analysis.claude_strength:calculate_strength_with_claude:305 | Claude level not matched | {'symbol': 'AKEUSDT', 'level_price': 0.00031656, 'claude_prices': [0.00035, 0.00032, 0.00031]}
+2026-07-15 06:25:18 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'BILLUSDT', 'order_id': '96591da2-b8bf-49aa-b96d-1eeface9df6d', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784096718609}}
+2026-07-15 06:25:21 | WARNING | trading.bybit_client:cancel_order:247 | bybit cancel_order unexpected response | {'symbol': 'BILLUSDT', 'order_id': 'a61141b5-79da-4b3f-bb42-0b0992aa107a', 'resp': {'retCode': 110001, 'retMsg': 'order not exists or too late to cancel', 'result': {}, 'retExtInfo': {}, 'time': 1784096721847}}
+2026-07-15 06:42:10 | WARNING | data.collector:_update:77 | Failed to update candles for %s | {}

@@ -1,0 +1,553 @@
+2026-07-18 06:08:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:08:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:10:02 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00815014, 'event': 'zakol', 'fill_depth': 0.3575398704807576}
+2026-07-18 06:11:55 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.03062, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.05}
+2026-07-18 06:14:04 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 06:15:06 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'BANKUSDT', 'level': 0.069235625, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 06:15:06 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'BANKUSDT', 'level': 0.06861}
+2026-07-18 06:15:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'BANKUSDT', 'level': 0.06861, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 06:15:06 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': 'BANKUSDT', 'level': 0.06861, 'approach_count': 12}
+2026-07-18 06:15:06 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'BANKUSDT', 'resistance': 0.069235625, 'from_support': 0.06861}
+2026-07-18 06:15:07 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'BANKUSDT', 'level': 0.069235625, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 06:16:07 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': 'BANKUSDT', 'level': 0.068274, 'event': 'zakol', 'fill_depth': 0.9286111843454252}
+2026-07-18 06:18:29 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00815014, 'event': 'bounce', 'fill_depth': 0.026257217667419626}
+2026-07-18 06:24:07 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 4, 'new': 0}
+2026-07-18 06:25:40 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': 'BANKUSDT', 'level': 0.068274, 'event': 'bounce', 'fill_depth': 0.0}
+2026-07-18 06:26:30 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:26:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:27:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:27:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:27:25 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.044189, 'type': 'pump_base', 'strength': 5, 'dist_atr': 2.08}
+2026-07-18 06:27:25 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '88%'}
+2026-07-18 06:27:31 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:27:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:28:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:28:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:28:32 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:28:47 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:29:02 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:29:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:29:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:29:48 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:30:03 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:30:18 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:30:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:30:49 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:31:04 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:31:19 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:31:25 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'DODOXUSDT', 'level': 0.022093, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.42}
+2026-07-18 06:31:26 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'DODOXUSDT', 'level': 0.021884, 'strength': 5}
+2026-07-18 06:31:26 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'DODOXUSDT', 'phase': 'flat', 'note': 'flat:range=3.1%,dir_eff=0.00'}
+2026-07-18 06:31:26 | INFO | trading.strategy2_signal_filter:check:856 | S2: SL adjusted to minimum distance | {'symbol': 'DODOXUSDT', 'min_dist_pct': 0.25, 'stop_loss': 0.02182937}
+2026-07-18 06:31:26 | INFO | trading.strategy2_signal_filter:check:948 | S2 signal passed all filters | {'symbol': 'DODOXUSDT', 'level': 0.021884, 'level_type': 'pump_base', 'strength': 5, 'p_bounce': 0.948, 'sl': 0.02182937, 'tp1': 0.02192341, 'tp2': 0.02222543, 'rr': 0.72, 'phase': 'flat', 'pos_struct_pct': 43.3, 'pos_local_pct': -2.7, 'struct_range': [0.019928, 0.024449], 'approach_speed_pct': 0.43, 'red_candles_streak': 0, 'phase_streak_checks': 1, 'phase_streak_seconds': 0.0, 'bleed_in_last_12': 0, 'seconds_since_bleed': None, 'phase_seq': 'dddddddddddf', 'hours_since_pump_peak': 15.3, 'vol_decay': 0.12, 'natr_now_pct': 0.98}
+2026-07-18 06:31:26 | ERROR | trading.strategy2_live:_open_grid:581 | S2Live: failed to get instrument info | {'symbol': 'DODOXUSDT', 'error': 'instrument info not found for DODOXUSDT'}
+2026-07-18 06:31:29 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'DODOXUSDT', 'level': 0.021884, 'distance_pct': 1.3789995493465557}
+2026-07-18 06:31:34 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:31:49 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:32:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:32:20 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:32:35 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:32:50 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:33:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:33:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:33:36 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:33:51 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:34:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:34:09 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 06:34:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:34:37 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:34:52 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:35:07 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:35:22 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:35:25 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.06861, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.53}
+2026-07-18 06:35:26 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 06:35:37 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:35:53 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:35:58 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'AKEUSDT'}
+2026-07-18 06:35:58 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'AKEUSDT', 'total_levels': 4}
+2026-07-18 06:36:08 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:36:23 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:36:38 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:36:53 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:37:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:37:24 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:37:39 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:37:54 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:38:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:38:24 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:38:40 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:38:55 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:39:10 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:39:25 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:39:40 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:39:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:40:11 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:40:26 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:40:41 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:40:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:41:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:41:27 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:41:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:41:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:42:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:42:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:42:43 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:42:58 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:43:13 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:43:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:43:44 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:43:59 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:44:13 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 06:44:14 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:44:29 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:44:44 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:45:00 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:45:15 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:45:30 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:45:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:46:00 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:46:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:46:26 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.03062, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.1}
+2026-07-18 06:46:31 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:46:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:47:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:47:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:47:32 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:47:47 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:48:02 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:48:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.007981, 'approach_count': 5, 'block_threshold': 4}
+2026-07-18 06:48:48 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00815014, 'event': 'bounce', 'fill_depth': 0.05079667343137295}
+2026-07-18 06:54:15 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 06:55:08 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': '1000XECUSDT'}
+2026-07-18 06:55:08 | INFO | __main__:_run_phase1:575 | Replaced old monitor with closer level | {'symbol': '1000XECUSDT', 'old': 0.007981, 'new': 0.008223}
+2026-07-18 06:55:08 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': '1000XECUSDT', 'level': 0.007981}
+2026-07-18 06:55:08 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': '1000XECUSDT', 'level': 0.008223, 'close_below': 22}
+2026-07-18 07:00:17 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'USUSDT'}
+2026-07-18 07:00:17 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 25, 'broken': 0, 'correction': '101%'}
+2026-07-18 07:00:26 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.043577, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.79}
+2026-07-18 07:00:26 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 25, 'broken': 0, 'correction': '102%'}
+2026-07-18 07:01:08 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'BANKUSDT'}
+2026-07-18 07:01:08 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 07:04:18 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 07:04:56 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': '1000XECUSDT', 'level': 0.008234, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.52}
+2026-07-18 07:04:56 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': '1000XECUSDT', 'level': 0.008234, 'close_below': 15}
+2026-07-18 07:08:26 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.07193, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.1}
+2026-07-18 07:08:26 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 07:10:56 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'AKEUSDT', 'level': 0.00187965, 'type': 'pump_base', 'strength': 5, 'dist_atr': 2.94}
+2026-07-18 07:10:57 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': 'AKEUSDT', 'level': 0.00187965, 'close_below': 12}
+2026-07-18 07:11:16 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'DODOXUSDT', 'level': 0.022025764705882352, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 07:11:16 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'DODOXUSDT', 'level': 0.021884}
+2026-07-18 07:11:16 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'DODOXUSDT', 'resistance': 0.022025764705882352, 'from_support': 0.021884}
+2026-07-18 07:11:16 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'DODOXUSDT', 'level': 0.022025764705882352, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 07:14:21 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 07:15:39 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'ESPORTSUSDT'}
+2026-07-18 07:18:56 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.02832, 'type': 'pump_base', 'strength': 5, 'dist_atr': 2.28}
+2026-07-18 07:24:24 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 07:32:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.044189, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.95}
+2026-07-18 07:32:27 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '93%'}
+2026-07-18 07:34:27 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
+2026-07-18 07:35:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'type': 'pump_base', 'strength': 5, 'dist_atr': 3.79}
+2026-07-18 07:35:27 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'strength': 5}
+2026-07-18 07:35:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 07:35:42 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 13}
+2026-07-18 07:35:45 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'distance_pct': 1.8727705112960926}
+2026-07-18 07:35:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:36:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:36:11 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'AKEUSDT'}
+2026-07-18 07:36:11 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'strength': 5}
+2026-07-18 07:36:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:36:31 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:36:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:37:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:37:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:37:32 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:37:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:38:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:38:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:38:33 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9}
+2026-07-18 07:38:33 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'distance_pct': 1.910562757040969}
+2026-07-18 07:38:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:38:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:38:48 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:39:03 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:40:04 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:40:19 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:41:35 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:41:50 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:42:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:42:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:42:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.06861, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.49}
+2026-07-18 07:42:27 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 07:42:36 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:42:51 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:43:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:43:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:43:37 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:43:52 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 07:44:07 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018842, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:44:17 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'AKEUSDT', 'level': 0.0019289714285714284, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 07:44:17 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'AKEUSDT', 'level': 0.0018842}
+2026-07-18 07:44:17 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'AKEUSDT', 'resistance': 0.0019289714285714284, 'from_support': 0.0018842}
+2026-07-18 07:44:18 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'AKEUSDT', 'level': 0.0019289714285714284, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 07:44:30 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 07:45:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.66}
+2026-07-18 07:45:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'DODOXUSDT', 'level': 0.021017, 'type': 'pump_base', 'strength': 5, 'dist_atr': 3.62}
+2026-07-18 07:45:28 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'strength': 5}
+2026-07-18 07:45:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:45:28 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10}
+2026-07-18 07:45:28 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'DODOXUSDT', 'level': 0.021017, 'strength': 5}
+2026-07-18 07:45:28 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'DODOXUSDT', 'level': 0.021017, 'distance_pct': 1.3980764719680958}
+2026-07-18 07:45:28 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'distance_pct': 1.7904543798469772}
+2026-07-18 07:45:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:45:43 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:45:43 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:45:59 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:46:04 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:46:14 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:46:29 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:46:54 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:47:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:47:15 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:47:25 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:48:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:48:20 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:48:36 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:48:51 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:48:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:48:57 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.02832, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.38}
+2026-07-18 07:49:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:49:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:49:26 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.0082525, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:49:36 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 07:49:52 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 07:50:28 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'AKEUSDT', 'level': 0.0018869, 'result': 'пробой', 'outcome': 'breakout', 'duration': 300.2}
+2026-07-18 07:50:28 | INFO | __main__:_start_next_level_after_breakout:933 | Next level from cache started | {'symbol': 'AKEUSDT', 'level': 0.00179}
+2026-07-18 07:51:08 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'AKEUSDT', 'level': 0.00179, 'distance_pct': 1.599692155461492}
+2026-07-18 07:51:08 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'AKEUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.89'}
+2026-07-18 07:51:08 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'AKEUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.89'}
+2026-07-18 07:51:28 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': 'AKEUSDT', 'level': 0.00175667, 'event': 'bounce', 'fill_depth': 0.0}
+2026-07-18 07:51:48 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'AKEUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.89'}
+2026-07-18 07:52:08 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'AKEUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.89'}
+2026-07-18 07:52:09 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'AKEUSDT', 'level': 0.0018486039215686273, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 07:52:09 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'AKEUSDT', 'resistance': 0.0018486039215686273, 'from_support': 0.00179}
+2026-07-18 07:52:09 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'AKEUSDT', 'level': 0.0018486039215686273, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 07:52:49 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'AKEUSDT', 'level': 0.00179, 'result': 'пробой', 'outcome': 'breakout', 'duration': 140.6}
+2026-07-18 07:52:49 | INFO | __main__:_start_next_level_after_breakout:933 | Next level from cache started | {'symbol': 'AKEUSDT', 'level': 0.00161558}
+2026-07-18 07:54:33 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 07:57:42 | INFO | __main__:_stale_monitor_loop:1179 | Stale monitor cancelled — rebuilding | {'symbol': 'AKEUSDT', 'level': 0.00161558, 'current': 0.001824, 'distance_pct': 11.4}
+2026-07-18 07:57:42 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'AKEUSDT', 'level': 0.00161558}
+2026-07-18 07:57:42 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'AKEUSDT', 'level': 0.00157452, 'strength': 5}
+2026-07-18 08:01:01 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'USUSDT'}
+2026-07-18 08:01:01 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '80%'}
+2026-07-18 08:01:21 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': '1000XECUSDT'}
+2026-07-18 08:01:21 | INFO | __main__:_run_phase1:575 | Replaced old monitor with closer level | {'symbol': '1000XECUSDT', 'old': 0.0082525, 'new': 0.008262}
+2026-07-18 08:01:21 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': '1000XECUSDT', 'level': 0.0082525}
+2026-07-18 08:01:22 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': '1000XECUSDT', 'level': 0.008262, 'strength': 5}
+2026-07-18 08:02:42 | INFO | __main__:_stale_monitor_loop:1179 | Stale monitor cancelled — rebuilding | {'symbol': 'AKEUSDT', 'level': 0.00157452, 'current': 0.0019122, 'distance_pct': 17.7}
+2026-07-18 08:02:42 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'AKEUSDT', 'level': 0.00157452}
+2026-07-18 08:02:43 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': 'AKEUSDT', 'level': 0.00179, 'close_below': 4}
+2026-07-18 08:03:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.044189, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.64}
+2026-07-18 08:03:27 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '88%'}
+2026-07-18 08:04:36 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 08:14:38 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
+2026-07-18 08:14:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:14:42 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10}
+2026-07-18 08:14:42 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': '1000XECUSDT', 'level': 0.008262, 'distance_pct': 1.8881368008549986}
+2026-07-18 08:14:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:14:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:15:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:15:17 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'BANKUSDT'}
+2026-07-18 08:15:17 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 08:15:27 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:15:42 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00834279, 'event': 'bounce', 'fill_depth': 0.0}
+2026-07-18 08:15:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:15:57 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'AKEUSDT', 'level': 0.00179, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.15}
+2026-07-18 08:15:57 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'AKEUSDT', 'total_levels': 1}
+2026-07-18 08:15:58 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:16:13 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:16:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:16:43 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:16:58 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:17:14 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:17:29 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:17:44 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:17:59 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:18:14 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:18:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.06861, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.62}
+2026-07-18 08:18:28 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 08:18:30 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:18:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:19:00 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:19:15 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:19:25 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'DODOXUSDT', 'level': 0.02122585714285714, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 08:19:25 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'DODOXUSDT', 'level': 0.021017}
+2026-07-18 08:19:25 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'DODOXUSDT', 'resistance': 0.02122585714285714, 'from_support': 0.021017}
+2026-07-18 08:19:26 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'DODOXUSDT', 'level': 0.02122585714285714, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 08:19:30 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:19:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:19:57 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'DODOXUSDT', 'level': 0.021058, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.0}
+2026-07-18 08:19:57 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'DODOXUSDT', 'health': 40, 'broken': 0, 'correction': '66%'}
+2026-07-18 08:20:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 8, 'block_threshold': 4}
+2026-07-18 08:20:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:20:27 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.02832, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.05}
+2026-07-18 08:20:31 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:20:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:21:02 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:21:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:21:32 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:21:47 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:22:02 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 9, 'block_threshold': 4}
+2026-07-18 08:22:18 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:22:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:22:48 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:23:03 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:23:08 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00838985, 'event': 'zakol', 'fill_depth': 0.4630595302657377}
+2026-07-18 08:23:18 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:23:34 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:23:49 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:24:04 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:24:19 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:24:34 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:24:41 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
+2026-07-18 08:24:50 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:25:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:25:40 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:25:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:26:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:26:36 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:26:51 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:27:07 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:27:22 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:27:37 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:27:52 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:28:07 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:28:23 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:28:38 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:28:53 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:29:08 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:29:23 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:29:39 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:29:54 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:30:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:30:24 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:30:39 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:30:55 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:31:10 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:31:25 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:31:40 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:31:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:32:11 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:32:26 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:32:41 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:32:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:33:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:33:27 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:33:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:33:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 08:34:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:34:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:34:43 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:34:43 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 3, 'new': 0}
+2026-07-18 08:34:58 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:35:13 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:35:28 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:35:44 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:35:57 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.043618, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.02}
+2026-07-18 08:35:57 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '107%'}
+2026-07-18 08:35:59 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:36:14 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:36:29 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:36:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:37:00 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:37:15 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:37:30 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:37:45 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:38:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:38:16 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:38:31 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:38:46 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:39:01 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:39:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:39:32 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:39:47 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:40:02 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:40:17 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:40:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:40:48 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:41:03 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 08:41:18 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:41:33 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:41:49 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:42:04 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:42:19 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:42:34 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:42:49 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:43:05 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00834279, 'event': 'zakol', 'fill_depth': 0.764612317941592}
+2026-07-18 08:43:05 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 11, 'block_threshold': 4}
+2026-07-18 08:43:20 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:43:35 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:43:50 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:44:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:44:21 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:44:46 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
+2026-07-18 08:44:51 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:45:06 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:45:22 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:45:37 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:45:52 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:46:07 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:46:22 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:46:38 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:46:53 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:47:08 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:47:23 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:47:28 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'AKEUSDT', 'level': 0.00179, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.32}
+2026-07-18 08:47:28 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'AKEUSDT', 'total_levels': 1}
+2026-07-18 08:47:38 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:47:54 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:48:09 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'AKEUSDT'}
+2026-07-18 08:48:09 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'AKEUSDT', 'total_levels': 1}
+2026-07-18 08:48:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:48:24 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:48:39 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:48:54 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:48:58 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.07041, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.3}
+2026-07-18 08:48:58 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 2}
+2026-07-18 08:49:10 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:49:25 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:49:40 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:49:55 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:50:11 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:50:26 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:50:41 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:50:56 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:51:11 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:51:27 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:51:42 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:51:57 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:51:58 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'ESPORTSUSDT', 'level': 0.02637, 'type': 'pump_base', 'strength': 5, 'dist_atr': 3.85}
+2026-07-18 08:51:58 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'ESPORTSUSDT', 'health': 45, 'broken': 0, 'correction': '54%'}
+2026-07-18 08:52:12 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': '1000XECUSDT', 'level': 0.008262, 'approach_count': 10, 'block_threshold': 4}
+2026-07-18 08:53:08 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00844313, 'event': 'bounce', 'fill_depth': 0.27395053730073654}
+2026-07-18 08:53:13 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': '1000XECUSDT', 'level': 0.00838985, 'event': 'zakol', 'fill_depth': 0.7133619790580306}
+2026-07-18 08:54:48 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
+2026-07-18 09:00:19 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'ESPORTSUSDT'}
+2026-07-18 09:00:19 | INFO | __main__:_run_phase1:652 | Level monitoring started | {'symbol': 'ESPORTSUSDT', 'level': 0.02637, 'strength': 5}
+2026-07-18 09:02:10 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': '1000XECUSDT'}
+2026-07-18 09:02:11 | INFO | __main__:_run_phase1:575 | Replaced old monitor with closer level | {'symbol': '1000XECUSDT', 'old': 0.008262, 'new': 0.00884975}
+2026-07-18 09:02:11 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': '1000XECUSDT', 'level': 0.008262}
+2026-07-18 09:02:11 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': '1000XECUSDT', 'level': 0.00884975, 'close_below': 24}
+2026-07-18 09:04:51 | INFO | config:add:68 | Token added | {'symbol': 'TRADOORUSDT'}
+2026-07-18 09:04:51 | INFO | __main__:_auto_screener_loop:192 | Auto-added new symbol from screener | {'symbol': 'TRADOORUSDT'}
+2026-07-18 09:04:52 | INFO | analysis.claude_strength:calculate_strength_with_claude:174 | Claude input levels | {'symbol': 'TRADOORUSDT', 'levels': [{'price': 0.45415, 'candle_count': 3, 'hourly_open_bonus': 1, 'round_number_bonus': 0, 'poc_aligned': False, 'position': 'impulse', 'volume_at_level': 1715978.0, 'type': 'mid_impulse_pause'}, {'price': 0.47677, 'candle_count': 25, 'hourly_open_bonus': 0, 'round_number_bonus': 1, 'poc_aligned': False, 'position': 'impulse', 'volume_at_level': 48229.0, 'type': 'body_level'}, {'price': 0.5022, 'candle_count': 3, 'hourly_open_bonus': 3, 'round_number_bonus': 1, 'poc_aligned': False, 'position': 'impulse', 'volume_at_level': 9550761.0, 'type': 'pump_base'}, {'price': 0.51495, 'candle_count': 26, 'hourly_open_bonus': 0, 'round_number_bonus': 0, 'poc_aligned': False, 'position': 'mid_move', 'volume_at_level': 237378.0, 'type': 'body_level'}, {'price': 0.52917, 'candle_count': 28, 'hourly_open_bonus': 0, 'round_number_bonus': 2, 'poc_aligned': False, 'position': 'mid_move', 'volume_at_level': 269102.0, 'type': 'body_level'}, {'price': 0.5347, 'candle_count': 5, 'hourly_open_bonus': 1, 'round_number_bonus': 0, 'poc_aligned': False, 'position': 'mid_move', 'volume_at_level': 16107120.0, 'type': 'pump_base'}]}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.45415, 'strength': 3, 'p_bounce_claude': 82, 'reason': 'Импульс-пауза, нормальный объём, мало тестов'}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.47677, 'strength': 3, 'p_bounce_claude': 88, 'reason': 'Боди-уровень, 25 свечей, низкий объём'}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.5022, 'strength': 5, 'p_bounce_claude': 96, 'reason': 'Пампбаза, объём 5.8x, открытие 4h (редко)'}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.51495, 'strength': 4, 'p_bounce_claude': 91, 'reason': 'Боди-уровень, 26 свечей, высокая обжитость'}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.52917, 'strength': 4, 'p_bounce_claude': 93, 'reason': 'Боди-уровень, 28 свечей в зоне, круглое число'}
+2026-07-18 09:04:55 | INFO | analysis.claude_strength:calculate_strength_with_claude:298 | Claude strength assigned | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'strength': 5, 'p_bounce_claude': 97, 'reason': 'Пампбаза, объём 9.8x, открытие 30m'}
+2026-07-18 09:04:55 | INFO | __main__:_auto_screener_loop:298 | Auto monitoring started | {'symbol': 'TRADOORUSDT', 'level': 0.5347}
+2026-07-18 09:04:55 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 4, 'new': 1}
+2026-07-18 09:05:08 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'TRADOORUSDT'}
+2026-07-18 09:05:08 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'distance_pct': 1.2010347376201147}
+2026-07-18 09:05:08 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 09:05:08 | INFO | trading.strategy2_signal_filter:check:505 | S2: level marked dead, monitor will stop sending proximity | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 12}
+2026-07-18 09:05:23 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 09:05:38 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 12, 'block_threshold': 4}
+2026-07-18 09:05:53 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 09:05:58 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'DODOXUSDT', 'level': 0.020658, 'type': 'pump_base', 'strength': 5, 'dist_atr': 3.8}
+2026-07-18 09:05:58 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'DODOXUSDT', 'health': 40, 'broken': 0, 'correction': '68%'}
+2026-07-18 09:06:09 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 09:06:24 | INFO | trading.strategy2_signal_filter:check:493 | S2 skip: approach>=block (G3, level exhausted) | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'approach_count': 13, 'block_threshold': 4}
+2026-07-18 09:06:25 | INFO | analysis.monitor:start_monitor:126 | monitor: skip level with non-positive p_bounce (won't pass entry filter) | {'symbol': 'TRADOORUSDT', 'level': 0.5431117647058823, 'level_type': 'wick_level', 'p_bounce': 0.0, 'expected_depth': 0.0}
+2026-07-18 09:06:25 | INFO | __main__:_monitored:798 | Monitor cancelled | {'symbol': 'TRADOORUSDT', 'level': 0.5347}
+2026-07-18 09:06:25 | INFO | __main__:_start_resistance_after_bounce:1116 | Resistance monitor started | {'symbol': 'TRADOORUSDT', 'resistance': 0.5431117647058823, 'from_support': 0.5347}
+2026-07-18 09:06:26 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'TRADOORUSDT', 'level': 0.5431117647058823, 'result': 'отбой', 'outcome': None, 'duration': 0.0}
+2026-07-18 09:06:28 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'USUSDT', 'level': 0.043636, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.32}
+2026-07-18 09:06:28 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 25, 'broken': 0, 'correction': '106%'}
+2026-07-18 09:07:35 | INFO | trading.strategy5_continuation:_open_trade:414 | S5 trade opened | {'trade_id': '3226ad64-d41d-4840-9dcf-4285b5ec31b0', 'symbol': 'AKEUSDT', 'entry': 0.0019373, 'sl': 0.0018975494, 'tp1': 0.0019770506, 'tp2': 0.0020168012, 'growth': 9.5, 'hours_since_peak': 2.1, 'trig_vol_ratio': 3.51, 'market_phase': 'unknown', 'natr_1m': 1.481, 'natr_15m': 5.306, 'basis': 'pump+9.5% 2.1h retr2.0%/2c trigvol3.5x phase=unknown vdecay=1.49'}
+2026-07-18 09:07:40 | INFO | trading.strategy5_live:_open_live:200 | S5Live OPEN | {'trade_id': '16614be1-a574-4441-864d-e37b97caaefb', 'symbol': 'AKEUSDT', 'entry': 0.0019252, 'qty': 51600.0, 'sl': 0.0018975494, 'tp1': 0.0019528505999999999, 'tp2': 0.0019805012, 'basis': 'pump+9.5% 2.1h retr2.0%/2c trigvol3.5x phase=unknown vdecay=1.49'}
+2026-07-18 09:10:28 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'TRADOORUSDT', 'level': 0.5347, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.13}
+2026-07-18 09:10:29 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': 'TRADOORUSDT', 'level': 0.52196, 'close_below': 4}
+2026-07-18 09:10:43 | INFO | trading.strategy5_live:_manage_one:268 | S5Live TP1 hit, SL→BE | {'trade_id': '16614be1-a574-4441-864d-e37b97caaefb', 'symbol': 'AKEUSDT'}
+2026-07-18 09:11:31 | INFO | trading.strategy5_live:_finalize_closed:328 | S5Live CLOSED | {'trade_id': '16614be1-a574-4441-864d-e37b97caaefb', 'symbol': 'AKEUSDT', 'reason': 'trail_or_sl_exchange', 'pnl': 0.3206, 'qty_mismatch': True}
+2026-07-18 09:11:33 | INFO | trading.strategy5_continuation:_check_exit:467 | S5 TP1 hit, stop → breakeven | {'trade_id': '3226ad64-d41d-4840-9dcf-4285b5ec31b0'}
+2026-07-18 09:11:58 | INFO | trading.strategy5_continuation:_send_close_message:522 | S5 trade closed | {'symbol': 'AKEUSDT', 'reason': 'stop_loss', 'pnl_pct': 1.54, 'pnl_usdt': 1.539, 'tp1_hit': True, 'trade_id': '3226ad64-d41d-4840-9dcf-4285b5ec31b0'}
+2026-07-18 09:14:58 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 4, 'new': 0}
+2026-07-18 09:15:16 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'DODOXUSDT'}
+2026-07-18 09:15:16 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': 'DODOXUSDT', 'level': 0.021795, 'close_below': 27}
+2026-07-18 09:18:28 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'AKEUSDT', 'level': 0.0018752, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.66}
+2026-07-18 09:18:29 | INFO | __main__:_run_phase1:601 | Level broken in recent candles, skipping monitor | {'symbol': 'AKEUSDT', 'level': 0.0018752, 'close_below': 11}
+2026-07-18 09:19:58 | INFO | __main__:_proximity_arm_loop:1948 | proximity-arm activated | {'symbol': 'BANKUSDT', 'level': 0.06861, 'type': 'pump_base', 'strength': 5, 'dist_atr': 1.88}
+2026-07-18 09:19:59 | INFO | __main__:_run_phase1:535 | No strong levels found | {'symbol': 'BANKUSDT', 'total_levels': 1}
+2026-07-18 09:22:17 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:17 | INFO | __main__:_proximity_loop:1258 | Proximity alert sent | {'symbol': 'ESPORTSUSDT', 'level': 0.02637, 'distance_pct': 1.9338043882484182}
+2026-07-18 09:22:17 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:22 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:27 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:32 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:32 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:37 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:42 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:47 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:47 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:52 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:22:58 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:03 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:03 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:08 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:18 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:23 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:28 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:33 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:33 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:38 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:43 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:48 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:48 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:23:53 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:09 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:09 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:14 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:19 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:24 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:24 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:29 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:34 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:39 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:49 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:54 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:54 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:24:59 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:02 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 4, 'new': 0}
+2026-07-18 09:25:04 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:09 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:09 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:14 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:19 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:25 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:25 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:30 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:35 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:40 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:40 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:25:55 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:26:10 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:26:25 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:26:41 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:26:56 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:27:11 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:27:26 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:27:57 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:14 | INFO | __main__:_trigger_loop:357 | Trigger activated | {'symbol': 'USUSDT'}
+2026-07-18 09:31:14 | INFO | __main__:_run_phase1:414 | Pump degraded, skipping monitoring | {'symbol': 'USUSDT', 'health': 40, 'broken': 0, 'correction': '86%'}
+2026-07-18 09:31:14 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:20 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:25 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:30 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:35 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:31:40 | INFO | trading.strategy2_signal_filter:check:641 | S2 market phase | {'symbol': 'ESPORTSUSDT', 'phase': 'drop_tradeable', 'note': 'drop_tradeable:bq=0.55'}
+2026-07-18 09:33:01 | INFO | __main__:_monitored:787 | Level outcome saved | {'symbol': 'ESPORTSUSDT', 'level': 0.02637, 'result': 'пробой', 'outcome': 'breakout', 'duration': 1962.0}
+2026-07-18 09:33:02 | INFO | __main__:_start_next_level_after_breakout:982 | Next level rebuilt and started | {'symbol': 'ESPORTSUSDT', 'level': 0.02214}
+2026-07-18 09:35:03 | INFO | __main__:_proximity_loop:1381 | Weak level touch resolved | {'symbol': 'ESPORTSUSDT', 'level': 0.024887, 'event': 'bounce', 'fill_depth': 0.0}
+2026-07-18 09:35:04 | INFO | __main__:_auto_screener_loop:306 | Auto screener completed | {'total': 2, 'new': 0}
